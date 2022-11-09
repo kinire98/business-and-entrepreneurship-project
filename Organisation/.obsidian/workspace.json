@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Home/Content.md",
+                "file": "About/Content.md",
                 "mode": "source",
                 "source": true
               }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Home/Content.md",
+                "file": "About/Content.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,12 +109,12 @@
   },
   "active": "181c615ce4b1ac0a",
   "lastOpenFiles": [
-    "About/Content.md",
+    "Contact/Content.md",
     "Home/Content.md",
+    "About/Content.md",
     "About/About page.md",
     "Website content.md",
     "Home/Home page.md",
-    "Contact/Content.md",
     "Services/Content.md",
     "Services/Services page.md",
     "Nav bar/Nav bar.md",
