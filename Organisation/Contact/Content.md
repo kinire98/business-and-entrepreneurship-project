@@ -1,4 +1,4 @@
-There will be x cards which show ways in which people can contact me
++There will be x cards which show ways in which people can contact me
 The Github card will be in this section and in the section where I show all of my skills
 The tutorial for the cards will be [this one](https://youtu.be/joDhIH6Xumw)
 For the social media icons I will use [font awesome](https://fontawesome.com/)
@@ -18,7 +18,7 @@ Social media I will use:
 	- Image:
 		- [GitHub Icon](https://fontawesome.com/icons/github?s=&f=brands)
 	- HTML 
-		- `<i class="fa-brands fa-github-alt"></i>`
+		- `<i class="fa-brands fa-github"></i>`
 - Discord:
 	- Desc:
 		- Here you can talk to me, for a project request or anything related to a project. If you want, you can ask me for advice
@@ -74,7 +74,7 @@ Social media I will use:
 
 - Whatsapp:
 	- Desc:
-		- How to contact me when a project it's started. For privacy reasons, I will only give it once the project it's started
+		- How to contact me when a project it's started. Only for started projects
 	- Colors:
 		- #075e54
 		- #128c7e 

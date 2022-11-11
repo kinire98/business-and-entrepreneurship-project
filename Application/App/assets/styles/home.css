@@ -61,7 +61,7 @@ b {
 
 img {
     position: absolute;
-    right: -7.5vw;
+    right: -10vw;
     z-index: 0;
     width: 35vw;
     transform: rotate(-5deg);

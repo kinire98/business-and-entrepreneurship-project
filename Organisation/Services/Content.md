@@ -1,5 +1,5 @@
 There will be 2 groups, in both there will be included with documentation
-- ## More estándar and simple
+- ## More standard and simple
 	- 2 tiers
 		- ### Without support
 			- 2 times of deliver

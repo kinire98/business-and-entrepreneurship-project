@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+body {
+    background: #201435;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 2vw;
+    overflow-x: hidden;
+}
+h2 {
+    text-align: center;
+}
+hr {
+    width: 75%;
+}
+#contact-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: inherit;
+    margin: 5rem;
+}
+.inner-contact-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+
+/*Contact-cards*/
+.card {
+    aspect-ratio: 1/1.2;
+    border: 0.5vmin solid var(--border);
+    cursor: pointer;
+    position: relative;
+    width: 23vw;
+    background: black;
+    margin: 5vw;
+    margin-block-end: 12vw;
+    border-radius: 1vw;
+}
+
+.card::before {
+    border-radius: 1vw;
+    background: linear-gradient(
+        130deg,
+        transparent 0% 33%,
+        var(--g1) 66%,
+        var(--g2) 83.5%,
+        var(--g3) 100%
+    );
+    background-position: 0% 0%;
+    background-size: 300% 300%;
+    content: "";
+    height: 100%;
+    left:0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    transition: all 350ms ease;
+}
+
+.card:hover::before {
+    background-position: 100% 100%;
+    transform: scale(1.08, 1.03);
+}
+
+.card-content {
+    background: radial-gradient(
+        rgba(255, 255, 255, 0.2) 8%,
+        transparent 8%
+    );
+    background-position: 0% 0%;
+    background-size: 5vmin 5vmin;
+    height: calc(100% - 10vmin);
+    width: calc(100% - 10vmin);
+    padding: 5vmin;
+    transition: background-position 350ms ease;
+    z-index: 2;
+    position: relative;
+}
+.card:hover > .card-content {
+    background-position: -10% 0%;
+    
+}
+.card-title,
+.card-subtitle {
+    font-weight: 400;
+    margin: 0px;
+ }
+
+.card-title {
+    font-size: 3.5vw;
+}
+.card-subtitle {
+    font-size: 1.5vw;
+    margin-top: 1vw;
+}
+.card-subtitle-word {
+    display: inline-block;
+    margin: 0vmin 0.3vmin;
+    position: relative;
+    transform: translateY(40%);
+    transition: none;
+    opacity: 0;
+}
+.card:hover > .card-content > .card-subtitle > .card-subtitle-word {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: opacity 0ms, transform 200ms cubic-bezier(.9, .06, .15, .9);
+}
+.card-icon {
+    bottom: 0px;
+    color: var(--border);
+    font-size: 7vmin;
+    left: 0px;
+    margin: 5vmin;
+    position: absolute;
+    transition: color 250ms ease;
+    z-index: 2;position: absolute;
+    width: 5rem;
+}
+.card:hover > .card-icon {
+    color: white;
+}
