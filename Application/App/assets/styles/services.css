@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+:root {
+    --letter: #FFCA5F;
+    --back: #201435;
+    --transparent-white: rgba(255,255,255, .35);
+}
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +13,7 @@
 }
 
 body {
-    background: #201435;
+    background: var(--back);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,4 +21,47 @@ body {
     min-height: 100vh;
     font-size: 2vw;
     overflow: hidden;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+}
+button {
+    margin-inline: 1rem;
+    padding: 1rem;
+    color: var(--letter);
+    background: var(--back);
+    border-radius: 1.5rem;
+    border: 5px solid var(--letter);
+    transition: all .3s;
+    height: 2.5rem;
+    cursor: pointer;
+}
+i {
+    color: var(--letter);
+    font-size: 2.5rem;
+    display: inline-block;
+    height: 2.5rem;
+    cursor: pointer;
+    transition: transform .3s;
+}
+img {
+    height: 2.5rem;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+button:hover {
+    background-color: var(--transparent-white);
+    border-radius: 1.75rem;
+    margin-block: .2rem;
+    transform: scale(1.05, 1.03);
+}
+button:hover > i, button:hover > img {
+    transform: scale(1.05, 1.03);
+    cursor: pointer;
 }

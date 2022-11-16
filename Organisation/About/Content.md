@@ -35,7 +35,7 @@ My skills, such as languages, programming languages and other skills. Also a lit
 - How I Work
 	- 💪 Discipline and hard work 💪, my core values
 	- Collaboration and communication, fundamental for me
-		- I prefer the sentence **_I work with you_** rather than *_I work for you_*
+		- I prefer the sentence **_I work with you_** rather than _I work for you_
 	- I provide energy, youth, ambition and new ideas to my projects
 
 ## Little details
