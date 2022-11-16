@@ -1,11 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+:root {
+    --letter: #FFCA5F;
+    --back: #201435;
+    --transparent-white: rgba(255,255,255, .35);
+    --card-color: rgb(23,23,23);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+body {
+    background: var(--back);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 2vw;
+    overflow-x: hidden;
+}
+
+/*Skills div*/
+#skills > ul {
+    font-size: 50px;
+}
+.skills {
+    width: 10%;
+    margin-inline: 5%;
+    color: var(--brand-color);
+}
+.bar-container {
+    width: 70%;
+}
+.bar {
+    width: var(--width);
+    height: 15px;
+    background: linear-gradient(135deg, var(--g1), var(--g2), var(--g3));
+}
+
+/*
+Hover cards
+(https://youtu.be/htGfnF1zN4g)
+*/
 #cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 2px;
     max-width: 916px;
     width: calc(100% - 20px)
 }
 .card {
-    background-color: rgba(0, 0, 0, 1);
+    position: relative;
+    background-color: rgba(255,255,255,.02);
+    border-radius: 10px;
+    cursor: pointer;
+    height: 60px;
     width: 250px;
 }
+
+.card::before,
+.card > .card-border  {
+    border-radius: inherit;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.card::before {
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255,255,255,.1),
+        transparent 40%
+    );
+    z-index: 3;
+}
+
+.card > .card-border {
+    background: radial-gradient(
+        400px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255,255,255,.3),
+        transparent 40%
+    );
+    z-index: 1;
+}
+
+#cards:hover > .card > .card-border {
+    opacity: 1;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card > .card-content {
+    position: relative;
+    height: calc(100% - 3px);
+    width: calc(100% - 3px);
+    background-color: var(--card-color);
+    border-radius: inherit;
+    margin: 1px;
+    z-index: 2;
+}
+/*End of glow cards*/
