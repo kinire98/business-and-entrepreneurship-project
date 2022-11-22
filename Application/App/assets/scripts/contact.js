@@ -1,4 +1,4 @@
-import { cardText } from "./cardText.js"
+import { cardText } from "./modules/cardText.js"
 
 document.addEventListener("DOMContentLoaded", () => {
     cardText();

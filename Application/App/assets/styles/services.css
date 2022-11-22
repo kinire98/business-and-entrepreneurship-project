@@ -40,13 +40,14 @@ i {
 }
 img {
     height: 2.5rem;
-    cursor: pointer;
     transition: transform .3s;
 }
 p {
     font-size: 1.5vw;
 }
-
+hr {
+    width: 100%;
+}
 button:hover > i, button:hover > img {
     transform: scale(1.05, 1.03);
     cursor: pointer;
@@ -153,4 +154,54 @@ button:hover > i, button:hover > img {
 }
 .card button:hover {
     background: rgba(255,255,255, .35);
+}
+/**Contact**/
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    margin-inline: 7.5vh;
+}
+#contact button {
+    padding-block: .5rem;
+    padding-inline: 2rem;
+    margin-inline: 5vw;
+    border-radius: 2rem;
+    font-size: 20px;
+}
+/**Footer**/
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 10vh;
+}
+footer > img {
+    width: 5vw;
+    height: 5vw;
+    margin-inline: 2vw;
+}
+footer > p {
+    width: 50vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer a {
+    text-decoration: none;
+    transition: color .2s;
+}
+footer a:hover {
+    color: var(--letter);
+}
+.vl {
+    display: inline-block;
+    border-left: 1px solid white;
+    height: 20px;
+    margin-inline: 15px;
+}
+#year {
+    margin-inline: 5px;
 }
