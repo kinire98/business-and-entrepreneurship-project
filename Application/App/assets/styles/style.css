@@ -1,0 +1,29 @@
+:root {
+    --letter: #FFCA5F;
+    --back: #201435;
+    --transparent-white: rgba(255,255,255, .35);
+    --letter-dif: #FFCA5F66;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--back);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--letter);
+    border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--letter-dif);
+}
+html {
+    scrollbar-color: var(--letter) var(--back);
+} 
