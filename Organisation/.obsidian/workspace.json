@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "About/Content.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -109,15 +109,15 @@
   },
   "active": "181c615ce4b1ac0a",
   "lastOpenFiles": [
-    "About/About page.md",
+    "Pricing examples.md",
     "About/Content.md",
+    "About/About page.md",
     "Services/Content.md",
     "Contact/Content.md",
     "Website content.md",
     "Home/Content.md",
     "Home/Home page.md",
     "Services/Services page.md",
-    "Nav bar/Nav bar.md",
-    "Blog/Blog.md"
+    "Nav bar/Nav bar.md"
   ]
 }

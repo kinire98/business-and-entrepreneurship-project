@@ -20,37 +20,111 @@ body {
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
-    font-size: 2vw;
+    font-size: 35px;
     overflow-x: hidden;
 }
+h2 {
+    margin-block: 5%;
+}
+.div {
+    margin-block: 10vh;
+}
+/*who am I div*/
 
+#who-am-I {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
+}
+#who-am-I > .internals {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.internals > ul {
+    list-style-type: none;
+    margin-inline: 5%;
+}
+.internals > ul > li {
+    margin-block: 35px;
+}
+.internals  span {
+    display: inline-block;
+    font-size: calc(2vw + 15px);
+}
 /*Skills div*/
+#skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+#skills > h2 {
+    margin-block: 5vh;
+}
 #skills > ul {
+    width: 60%;
     font-size: 50px;
+    list-style-type: none;
+    /* border: 5px solid white;
+    border-radius: 1rem; */
+}
+#skills > ul > li {
+    width: 100%;
+    position: relative;
 }
 .skills {
-    width: 10%;
-    margin-inline: 5%;
-    color: var(--brand-color);
+    text-align: center;
+    color: var(--color);
+    border-radius: 1rem;
+    padding: 5px;
+    padding-inline: 10px;
 }
 .bar-container {
-    width: 70%;
+    display: inline-block;
+    width: 80%;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top:20px;
+    background: rgba(0,0,0,.5);
+    border-radius: 5rem;
 }
 .bar {
+    display: inline-block;
     width: var(--width);
-    height: 15px;
+    height: 50px;
+    border-radius: 5rem;
     background: linear-gradient(135deg, var(--g1), var(--g2), var(--g3));
+    position: relative;
+    bottom: 6px;
+}
+.font-size {
+    font-size: 75px;
+    cursor: pointer;
 }
 
 /*
 Hover cards
 (https://youtu.be/htGfnF1zN4g)
 */
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
 #cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 2px;
-    max-width: 916px;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 75%;
     width: calc(100% - 20px)
 }
 .card {
@@ -58,8 +132,8 @@ Hover cards
     background-color: rgba(255,255,255,.02);
     border-radius: 10px;
     cursor: pointer;
-    height: 60px;
-    width: 250px;
+    height: 150px;
+    width: 450px;
 }
 
 .card::before,
@@ -76,8 +150,8 @@ Hover cards
 }
 .card::before {
     background: radial-gradient(
-        800px circle at var(--mouse-x) var(--mouse-y),
-        rgba(255,255,255,.1),
+    1000px circle at var(--mouse-x) var(--mouse-y),
+        var(--color),
         transparent 40%
     );
     z-index: 3;
@@ -85,8 +159,8 @@ Hover cards
 
 .card > .card-border {
     background: radial-gradient(
-        400px circle at var(--mouse-x) var(--mouse-y),
-        rgba(255,255,255,.3),
+        1000px circle at var(--mouse-x) var(--mouse-y),
+        var(--color),
         transparent 40%
     );
     z-index: 1;
@@ -108,5 +182,43 @@ Hover cards
     border-radius: inherit;
     margin: 1px;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
-/*End of glow cards*/
+.card-content > span {
+    z-index: 4;
+    opacity: 0;
+    transition: .5s opacity;
+    font-size: 35px;
+}
+.card:hover > .card-content > span {
+    opacity: 1;
+}
+.card-content > * {
+    margin-inline: 5%;
+}
+.card-content > i {
+    font-size: 50px;
+}
+
+/*Values div*/
+#values {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
+}
+#values > ul > li > ul {
+    display: inline-block;
+    margin-left: 50px;
+}
+#values b {
+    font-weight: 900;
+    font-size: 50px;
+    margin-left: 15%;
+}
+#values i {
+    margin-left: 5%;
+}
