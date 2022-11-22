@@ -1,4 +1,4 @@
-import { glowCards } from "./glowCards.js"
+import { glowCards } from "./modules/glowCards.js"
 
 
 document.addEventListener("DOMContentLoaded", () => {

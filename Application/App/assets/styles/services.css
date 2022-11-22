@@ -3,6 +3,7 @@
     --letter: #FFCA5F;
     --back: #201435;
     --transparent-white: rgba(255,255,255, .35);
+    --letter-dif: #FFCA5F66;
 }
 * {
     margin: 0;
@@ -19,7 +20,7 @@ body {
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
-    font-size: 2vw;
+    font-size: 25px;
     overflow-x: hidden;
 }
 .buttons {
@@ -42,9 +43,6 @@ img {
     height: 2.5rem;
     transition: transform .3s;
 }
-p {
-    font-size: 1.5vw;
-}
 hr {
     width: 100%;
 }
@@ -52,7 +50,73 @@ button:hover > i, button:hover > img {
     transform: scale(1.05, 1.03);
     cursor: pointer;
 }
-/** Hover cards **/
+/** Relax section **/
+
+#relax {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--letter);
+    color: var(--back);
+    width: 90%;
+    margin-block: 5vh;
+    border-radius: 1rem;
+    padding: 3rem;
+}
+#relax * {
+    color: var(--back);
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+}
+.row img {
+    width: 30%;
+    height: 30%;
+    margin-inline: 5%;
+    margin-block: 2%;
+    border-radius: 1rem;
+    box-shadow: 5px -5px 10px var(--back),
+                5px -5px 15px var(--back);
+}
+.row img:hover {
+    transform:scale(1.05, 1.05);
+}
+.you {
+    position: absolute;
+    bottom: 5%;
+    left: 35%;
+    transform: translateY(15px);
+    opacity: 0;
+    transition: all .3s;
+}
+div.hover {
+    opacity: 1;
+    transform: translateY(0px);
+} 
+.another-row {
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    flex-direction: column;
+}
+.another-another-row {
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    flex-direction: row;
+    margin-block: 2rem;
+}
+.another-another-row div {
+    margin-inline: 2rem;
+}
+
+
+/** Fees section**/
 .plans {
     display: flex;
     align-items:flex-end;
@@ -62,12 +126,11 @@ button:hover > i, button:hover > img {
 .card {
     aspect-ratio: 1.5/1;
     border: 0.5vmin solid var(--border);
-    cursor: pointer;
     position: relative;
     width: 23vw;
     background: black;
     margin: 5vw;
-    margin-block-end: 1vw;
+    margin-block-end: 1rem;
     border-radius: 1vw;
 }
 
@@ -114,23 +177,10 @@ button:hover > i, button:hover > img {
     background-position: -10% -10%;
     
 }
-.card-title,
-.card-subtitle {
-    font-weight: 400;
-    margin: 0px;
- }
-
 .card-title {
     font-size: 3.5vw;
+    font-weight: 900;
 }
-.card-subtitle {
-    font-size: 1.5vw;
-    margin-top: 1vw;
-}
-.card-title {
-    color: var(--g3);
-}
-
 .card p {
     transition: all .3s ease-in-out;
 }
@@ -139,21 +189,32 @@ button:hover > i, button:hover > img {
     transform: translateY(-15px);
 }
 .card button {
-    background: transparent;
+    background: black;
     font-size: 1vw;
-    padding: 1rem;
+    padding-block: .5rem;
+    padding-inline: 2rem; 
+    border-radius: 2rem;
+    border: 2px solid var(--border);
     cursor: pointer;
     opacity: 0;
-    transition: all .3s ease-in-out;
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out, background .1s, border .1s ;
     transform: translateY(15px);
-    border-radius: .5rem;
 }
 .card:hover button {
     transform: translateY(0px);
     opacity: 1;
 }
-.card button:hover {
-    background: rgba(255,255,255, .35);
+.card button:active {
+    background: var(--border);
+    border: 2px simple transparent;
+    color: black;
+}
+.card-content > p {
+    background: var(--border);
+    display: inline;
+    padding-inline: 10px;
+    border-radius: 1rem;
+    color: black;
 }
 /**Contact**/
 #contact {
@@ -163,12 +224,34 @@ button:hover > i, button:hover > img {
     height: 20vh;
     margin-inline: 7.5vh;
 }
-#contact button {
+#contact > button {
     padding-block: .5rem;
     padding-inline: 2rem;
     margin-inline: 5vw;
     border-radius: 2rem;
     font-size: 20px;
+    background: transparent;
+    border: 2px solid var(--letter);
+    color: var(--letter);
+    cursor: pointer;
+    transition: all .125s;
+}
+#contact > button:hover {
+    background: var(--letter-dif);
+    color: var(--back);
+}
+#contact > button:active {
+    border: 2px solid var(--back);
+    background: var(--letter);
+    color: var(--back);
+
+}
+#contact a {
+    text-decoration: none;
+    color: inherit;
+}
+button:hover > a {
+    text-decoration: underline;
 }
 /**Footer**/
 footer {
@@ -177,12 +260,14 @@ footer {
     justify-content: center;
     padding-block: 10vh;
 }
-footer > img {
+footer > a,
+footer > a > img {
     width: 5vw;
     height: 5vw;
     margin-inline: 2vw;
 }
 footer > p {
+    font-size: 15px;
     width: 50vw;
     text-align: center;
     display: flex;
@@ -191,7 +276,7 @@ footer > p {
 }
 footer a {
     text-decoration: none;
-    transition: color .2s;
+    transition: color .3s;
 }
 footer a:hover {
     color: var(--letter);
