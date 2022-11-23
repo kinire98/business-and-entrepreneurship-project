@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 :root {
     --letter: #FFCA5F;
-    --back: #201435;
-    --transparent-white: rgba(255,255,255, .35);
+    --back: #302455;
+    --transparent-white: rgba(255,255,255, .5);
     --letter-dif: #FFCA5F66;
 }
 * {
@@ -54,10 +54,16 @@ button:hover > i, button:hover > img {
     flex-direction: column;
     height: 100vh;
     width: 100%;
-    background: black;
-    background-image: radial-gradient(var(--letter) 3px, transparent 0);
+    background: var(--transparent-white);
+    background-image: radial-gradient(var(--back) 3px, transparent 0);
     background-size: 40px 40px;
     background-attachment: fixed;
+}
+#title > h1,
+#title > h2 {
+    background: var(--back);
+    color: white;
+    padding: 2rem;
 }
 /** Relax section **/
 
@@ -68,9 +74,9 @@ button:hover > i, button:hover > img {
     flex-direction: column;
     background: var(--letter);
     color: var(--back);
-    width: 90%;
-    margin-block: 5vh;
-    border-radius: 1rem;
+    width: 100%;
+    height: 85vh;
+    margin-block-end: 5vh;
     padding: 3rem;
 }
 #relax * {
@@ -84,8 +90,8 @@ button:hover > i, button:hover > img {
     position: relative;
 }
 .row img {
-    width: 30%;
-    height: 30%;
+    width: 20%;
+    height:85%;
     margin-inline: 5%;
     margin-block: 2%;
     border-radius: 1rem;
@@ -123,7 +129,80 @@ div.hover {
 .another-another-row div {
     margin-inline: 2rem;
 }
+/**Steps**/
+#steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-block: 5vh;
+    width: 100%;
+    height: 65vh;
 
+}
+#steps > .row {
+    display: flex;
+    flex-direction: row;
+}
+#steps > .row > .column {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 5vw;
+}
+#steps > h2 {
+    margin-block-end: 7.5vh;
+    margin-block-start: 2.5vh;
+    text-align: center;
+}
+#steps > h3 {
+    margin-block: 2.5vh;
+    text-align: center;
+}
+#steps > hr {
+    width: 15%;
+}
+/**Middle hr**/
+.top-margin {
+    margin-block-start: 5vh;
+}
+/**Included**/
+#included {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 65vh;
+    background: var(--transparent-white);
+    background-image: radial-gradient(var(--back) 3px, transparent 0);
+    background-size: 40px 40px;
+    background-attachment: fixed;
+}
+#included > .column {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 5vw;
+    padding-block: .5rem;
+    padding-inline: 2rem;
+    background: var(--back);
+    border-radius: 2rem;
+}
+#included h2,
+#included h3 {
+    margin-block: 2vh;
+    
+}
+#included > ul {
+    background: var(--back);
+    border-radius: 1rem;
+    padding-block: .5rem;
+    padding-inline: 2rem;
+    padding-inline-start: 2.5rem;
+}
+#included > ul > li {
+    margin-block: 1rem;
+    list-style-type: '☑️';
+    padding-inline-start: 2ch;
+}
 
 /** Fees section**/
 #plans {
@@ -155,7 +234,7 @@ div.hover {
         var(--g1) 66%,
         var(--g2) 83.5%,
         var(--g3) 100%
-    );
+        );
     background-position: 0% 0%;
     background-size: 300% 300%;
     content: "";
@@ -173,6 +252,7 @@ div.hover {
 }
 
 .card-content {
+    background-attachment: fixed;
     background: radial-gradient(
         var(--border) 8%,
         transparent 8%
@@ -238,7 +318,6 @@ div.hover {
     width: 100%;
     height: 25vw;
     z-index: 999;
-    margin-block: 5vh;
 }
 #column {
     display: flex;
@@ -248,13 +327,18 @@ div.hover {
     text-align: center;
     height: 100%;
 }
-#me > img {
+#first {
     width: 85%;
     height: 100%;
+    background-image: url('../img/myDesktop.jpg');
+    background-size: cover;
 }
-#me > img[Alt="Me"] {
+#second {
     width: 35%;
+    height: 100%;
     margin-inline-end: 0;
+    background-image: url('../img/me.jpg');
+    background-size: 400%;
 }
 #me button {
     margin-block: 2vh;
@@ -281,11 +365,16 @@ div.hover {
 
 /**Contact**/
 #contact {
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 20vh;
     margin-inline: 7.5vh;
+    background: var(--transparent-white);
+    background-image: radial-gradient(var(--back) 3px, transparent 0);
+    background-size: 40px 40px;
+    background-attachment: fixed;
 }
 #contact > button {
     padding-block: .5rem;
@@ -349,6 +438,10 @@ footer a:hover {
     border-left: 1px solid white;
     height: 20px;
     margin-inline: 15px;
+}
+.vl.big {
+    height: 7.5rem;
+    border-left: 3px solid white;
 }
 #year {
     margin-inline: 5px;
