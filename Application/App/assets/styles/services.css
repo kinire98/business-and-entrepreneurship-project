@@ -54,7 +54,7 @@ button:hover > i, button:hover > img {
     flex-direction: column;
     height: 100vh;
     width: 100%;
-    background: var(--transparent-white);
+    background: white;
     background-image: radial-gradient(var(--back) 3px, transparent 0);
     background-size: 40px 40px;
     background-attachment: fixed;
@@ -81,6 +81,9 @@ button:hover > i, button:hover > img {
 }
 #relax * {
     color: var(--back);
+}
+#relax::target-text {
+    margin-block: 1vh;
 }
 .row {
     display: flex;
@@ -172,7 +175,7 @@ div.hover {
     justify-content: center;
     width: 100vw;
     height: 65vh;
-    background: var(--transparent-white);
+    background: white;
     background-image: radial-gradient(var(--back) 3px, transparent 0);
     background-size: 40px 40px;
     background-attachment: fixed;
@@ -220,7 +223,7 @@ div.hover {
     border: 0.5vmin solid var(--border);
     position: relative;
     width: 23vw;
-    background: black;
+    background: var(--transparent-white);
     margin: 5vw;
     margin-block-end: 1rem;
     border-radius: 1vw;
@@ -234,7 +237,7 @@ div.hover {
         var(--g1) 66%,
         var(--g2) 83.5%,
         var(--g3) 100%
-        );
+    );
     background-position: 0% 0%;
     background-size: 300% 300%;
     content: "";
@@ -252,11 +255,10 @@ div.hover {
 }
 
 .card-content {
-    background-attachment: fixed;
     background: radial-gradient(
-        var(--border) 8%,
+        var(--back) 8%,
         transparent 8%
-    );
+        );
     background-position: 0% 0%;
     background-size: 5vmin 5vmin;
     height: calc(100% - 10vmin);
@@ -265,6 +267,7 @@ div.hover {
     transition: background-position 350ms ease;
     z-index: 2;
     position: relative;
+    background-attachment: fixed;
 }
 .card:hover > .card-content {
     background-position: -10% -10%;
@@ -273,6 +276,11 @@ div.hover {
 .card-title {
     font-size: 3.5vw;
     font-weight: 900;
+    background: var(--border);
+    padding-inline: 2rem; 
+    border-radius: 2rem;
+    margin-block: 1rem;
+    transition: all .3s;
 }
 .card p {
     transition: all .3s ease-in-out;
@@ -296,6 +304,9 @@ div.hover {
 .card:hover button {
     transform: translateY(0px);
     opacity: 1;
+}
+.card:hover .card-title {
+    background: transparent;
 }
 .card button:active {
     background: var(--border);
@@ -371,7 +382,7 @@ div.hover {
     justify-content: center;
     height: 20vh;
     margin-inline: 7.5vh;
-    background: var(--transparent-white);
+    background: white;
     background-image: radial-gradient(var(--back) 3px, transparent 0);
     background-size: 40px 40px;
     background-attachment: fixed;
@@ -382,14 +393,14 @@ div.hover {
     margin-inline: 5vw;
     border-radius: 2rem;
     font-size: 20px;
-    background: transparent;
+    background: var(--back);
     border: 2px solid var(--letter);
     color: var(--letter);
     cursor: pointer;
     transition: all .125s;
 }
 #contact  button:hover {
-    background: var(--letter-dif);
+    background: var(--letter);
     color: var(--back);
 }
 #contact  button:active {
@@ -404,6 +415,12 @@ div.hover {
 }
 button:hover > a {
     text-decoration: underline;
+} 
+#contact > p {
+    background: var(--back);
+    padding-block: .5rem;
+    padding-inline: 2rem;
+    border-radius: 2rem;
 }
 /**Footer**/
 footer {
