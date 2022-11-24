@@ -42,6 +42,13 @@ hr {
 a {
     text-decoration: none;
 }
+abbr {
+    cursor: pointer;
+}
+.red {
+    color: red;
+    text-decoration: none;
+}
 button:hover > i, button:hover > img {
     transform: scale(1.05, 1.03);
     cursor: pointer;
@@ -223,7 +230,7 @@ div.hover {
     border: 0.5vmin solid var(--border);
     position: relative;
     width: 23vw;
-    background: var(--transparent-white);
+    background: white;
     margin: 5vw;
     margin-block-end: 1rem;
     border-radius: 1vw;
@@ -319,6 +326,16 @@ div.hover {
     padding-inline: 10px;
     border-radius: 1rem;
     color: black;
+}
+/**Compare**/
+#compare {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.compare {
+    margin-inline: 5vw;
+    text-align: center;
 }
 /**About me**/
 #me {
