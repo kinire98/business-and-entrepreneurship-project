@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+:root {
+    --letter: #302455;
+    --back: #b2b2b2;
+    --transparent-white: rgba(255,255,255, .5);
+    --letter-dif: #FFCA5F66;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+html {
+    scrollbar-color: var(--letter) var(--back);
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: var(--back);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--letter);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--letter-dif);
+}
+body {
+    background: var(--back);
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 25px;
+    overflow-x: hidden;
+    color: var(--letter);
+}
+i {
+    color: var(--letter);
+    font-size: 2.5rem;
+    display: inline-block;
+    height: 2.5rem;
+    cursor: pointer;
+    transition: transform .3s;
+}
+img {
+    height: 2.5rem;
+    transition: transform .3s;
+}
+hr {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+abbr {
+    cursor: pointer;
+}
+/**Title**/
+#title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    background-image: radial-gradient(var(--back) 3px, transparent 0);
+    background-size: 40px 40px;
+    background-attachment: fixed;
+}
+#title * {
+    text-align: center;
+    background: var(--back);
+    padding: 1rem;
+    width: 35%;
+    border-radius: 1rem;
+}
+/**Characteristics**/
+#char {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 75vh;
+}
+#char > .row {
+    display: inline-flex;
+    flex-direction: row;
+}
+#char h3 {
+    display: inline;
+}
+/**extra features**/
+#extra-features {
+    height: 75vh;
+}
+/**Contact**/
+#contact {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    margin-inline: 7.5vh;
+    background: white;
+    background-image: radial-gradient(var(--back) 3px, transparent 0);
+    background-size: 40px 40px;
+    background-attachment: fixed;
+}
+#contact > button {
+    padding-block: .5rem;
+    padding-inline: 2rem;
+    margin-inline: 5vw;
+    border-radius: 2rem;
+    font-size: 20px;
+    background: var(--back);
+    border: 2px solid var(--letter);
+    color: var(--letter);
+    cursor: pointer;
+    transition: all .125s;
+}
+#contact  button:hover {
+    background: var(--letter);
+    color: var(--back);
+}
+#contact  button:active {
+    border: 2px solid var(--back);
+    background: var(--letter);
+    color: var(--back);
+
+}
+#contact a {
+    text-decoration: none;
+    color: inherit;
+}
+button:hover > a {
+    text-decoration: underline;
+} 
+#contact > p {
+    background: var(--back);
+    padding-block: .5rem;
+    padding-inline: 2rem;
+    border-radius: 2rem;
+}
+/**Footer**/
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 10vh;
+}
+footer > a,
+footer > a > img {
+    width: 5vw;
+    height: 5vw;
+    margin-inline: 2vw;
+}
+footer > p {
+    font-size: 15px;
+    width: 50vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer a {
+    text-decoration: none;
+    transition: color .3s;
+}
+footer a:hover {
+    color: var(--letter);
+}
+.vl {
+    display: inline-block;
+    border-left: 1px solid white;
+    height: 20px;
+    margin-inline: 15px;
+}
+.vl.big {
+    height: 7.5rem;
+    border-left: 3px solid white;
+}
+#year {
+    margin-inline: 5px;
+}
