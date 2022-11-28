@@ -65,6 +65,16 @@ a {
 abbr {
     cursor: pointer;
 }
+.vl {
+    display: inline-block;
+    border-left: 1px solid white;
+    height: 20px;
+    margin-inline: 15px;
+}
+.vl.big {
+    height: 85%;
+    border-left: 3px solid white;
+}
 /**Title**/
 #title {
     display: flex;
@@ -93,8 +103,17 @@ abbr {
     height: 75vh;
 }
 #char > .row {
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
+}
+#char > .row > div {
+    width: 35%;
+    margin-inline: 5vw;
+}
+#char > .row > div > p {
+    margin-top: 3vh;
 }
 #char h3 {
     display: inline;
@@ -178,16 +197,6 @@ footer a {
 }
 footer a:hover {
     color: var(--letter);
-}
-.vl {
-    display: inline-block;
-    border-left: 1px solid white;
-    height: 20px;
-    margin-inline: 15px;
-}
-.vl.big {
-    height: 7.5rem;
-    border-left: 3px solid white;
 }
 #year {
     margin-inline: 5px;
