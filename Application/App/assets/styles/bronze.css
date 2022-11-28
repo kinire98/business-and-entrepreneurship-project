@@ -81,7 +81,6 @@ abbr {
     background: var(--back);
     padding: 1rem;
     width: 35%;
-    border-radius: 1rem;
 }
 /**Characteristics**/
 #char {

@@ -51,7 +51,7 @@ abbr {
     color: red;
     text-decoration: none;
 }
-button:hover > i, button:hover > img {
+a:hover > i, a:hover > img {
     transform: scale(1.05, 1.03);
     cursor: pointer;
 }
@@ -83,6 +83,7 @@ button:hover > i, button:hover > img {
     background-image: radial-gradient(var(--back) 3px, transparent 0);
     background-size: 40px 40px;
     background-attachment: fixed;
+    box-shadow: 0 0 15px #000;
 }
 #title > h1,
 #title > h2 {
@@ -314,7 +315,8 @@ div.hover {
     opacity: 0;
     transform: translateY(-15px);
 }
-.card button {
+.card a {
+    display: inline-block;
     background: black;
     font-size: 1vw;
     padding-block: .5rem;
@@ -323,20 +325,23 @@ div.hover {
     border: 2px solid var(--border);
     cursor: pointer;
     opacity: 0;
-    transition: transform .3s ease-in-out, opacity .3s ease-in-out, background .1s, border .1s ;
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out, background .1s, border .1s, color .1s ;
     transform: translateY(15px);
 }
-.card:hover button {
+.card:hover a {
     transform: translateY(0px);
     opacity: 1;
 }
 .card:hover .card-title {
     background: transparent;
 }
-.card button:active {
+.card a:hover {
     background: var(--border);
-    border: 2px simple transparent;
-    color: black;
+    text-decoration: underline;
+}
+.card a:active {
+    background: var(--border);
+    border: 2px solid transparent;
 }
 .card-content > p {
     background: var(--border);
@@ -370,23 +375,26 @@ div.hover {
 .compare hr {
     color: var(--color);
 }
-.compare button {
-    border: 1px solid var(--color);
-    padding-block: .5rem;
-    padding-inline: 2rem; 
+.compare a {
+    display: inline-block;
+    border: 2px solid var(--color);
+    padding-block: .25rem;
+    padding-inline: 1rem; 
     border-radius: 2rem;
-    margin-block: 2vh;
+    margin-block: 1vh;
     background: transparent;
     cursor: pointer;
+    transition: all .3s;
 }
-.compare  button:hover {
+.compare  a:hover {
     background: var(--color);
     color: var(--back);
+    text-decoration: underline;
 }
-.compare button:active {
+.compare a:active {
     background: var(--color);
     color: var(--back);
-
+    border: 2px solid var(--back);
 }
 #silver {
     height: 100%;
@@ -424,6 +432,7 @@ div.hover {
     height: 100%;
     background-image: url('../img/myDesktop.jpg');
     background-size: cover;
+    background-attachment: fixed;
 }
 #second {
     width: 35%;
@@ -432,7 +441,7 @@ div.hover {
     background-image: url('../img/me.jpg');
     background-size: 400%;
 }
-#me button {
+#me a {
     margin-block: 2vh;
     background: transparent;
     padding-block: .5rem;
@@ -444,15 +453,16 @@ div.hover {
     cursor: pointer;
     font-size: 20px;
 }
-#me button > a {
+#me a  {
     color: inherit;
 }
-#me button:hover {
-    background: var(--letter-dif);
-    color: var(--back);
-}
-#me button:active {
+#me a:hover {
     background: var(--letter);
+    color: var(--back);
+    text-decoration: underline;
+}
+#me a:active {
+    border: 2px solid var(--back);
 }
 
 /**Contact**/
@@ -468,7 +478,7 @@ div.hover {
     background-size: 40px 40px;
     background-attachment: fixed;
 }
-#contact > button {
+#contact > a {
     padding-block: .5rem;
     padding-inline: 2rem;
     margin-inline: 5vw;
@@ -480,22 +490,19 @@ div.hover {
     cursor: pointer;
     transition: all .125s;
 }
-#contact  button:hover {
+#contact  a:hover {
     background: var(--letter);
     color: var(--back);
+    text-decoration: underline;
 }
-#contact  button:active {
+#contact  a:active {
     border: 2px solid var(--back);
     background: var(--letter);
     color: var(--back);
-
 }
 #contact a {
     text-decoration: none;
     color: inherit;
-}
-button:hover > a {
-    text-decoration: underline;
 } 
 #contact > p {
     background: var(--back);

@@ -57,6 +57,7 @@ img {
 }
 hr {
     width: 100%;
+    margin: 0;
 }
 a {
     text-decoration: none;
@@ -82,7 +83,6 @@ abbr {
     background: var(--back);
     padding: 1rem;
     width: 35%;
-    border-radius: 1rem;
 }
 /**Characteristics**/
 #char {
