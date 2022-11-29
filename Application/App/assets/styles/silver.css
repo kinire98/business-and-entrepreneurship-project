@@ -4,6 +4,7 @@
     --back: #b2b2b2;
     --transparent-white: rgba(255,255,255, .5);
     --letter-dif: #FFCA5F66;
+    --black: rgba(0,0,0,.75)
 }
 * {
     margin: 0;
@@ -119,7 +120,77 @@ abbr {
 }
 /**extra features**/
 #extra-features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 75vh;
+    width: 100%;
+}
+#extra-features > .back-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+#extra-features > .back-img > * {
+    position: relative;
+    margin-block: 5vh;
+    padding: 3rem;
+}
+#extra-features > .back-img > a {
+    background: var(--back);
+    padding-block: .5rem;
+    padding-inline: 2rem;
+    border-radius: 2rem;
+    border: 2px solid var(--back);
+    transition: all .3s;
+}
+#extra-features > .back-img > a:hover {
+    background: var(--letter);
+    color: var(--back);
+    text-decoration: underline;
+}
+#extra-features > .back-img > a:active {
+    border: 2px solid var(--back);
+    background: var(--back);
+    color: var(--letter);
+}
+#desing {
+    background-image: url('../img/web-desing.jpg');
+    background-attachment: fixed;
+    background-size: 125%;
+    background-position: -1100px -100px;
+}
+#relaxed {
+    background-image: url('../img/relaxed-man.jpg');
+    background-size: 100%;
+}
+#code {
+    background-image: url('../img/codecode.jpg');
+    background-attachment: fixed;
+}
+#extra-features > .back-img > .black {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    background: var(--black);
+    z-index: 0;
+    margin-block: 0vh;
+}
+ #extra-features > .back-img > .yellow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    background: var(--letter-dif);   
+    margin-block: 0vh;
 }
 /**Contact**/
 #contact {
