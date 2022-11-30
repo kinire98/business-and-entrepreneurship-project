@@ -4,7 +4,7 @@
     --back: #b2b2b2;
     --transparent-white: rgba(255,255,255, .5);
     --letter-dif: #FFCA5F66;
-    --black: rgba(0,0,0,.75)
+    --black: rgba(0,0,0,.75);
 }
 * {
     margin: 0;
@@ -159,17 +159,17 @@ abbr {
     background: var(--back);
     color: var(--letter);
 }
-#desing {
+#left {
     background-image: url('../img/web-desing.jpg');
     background-attachment: fixed;
     background-size: 125%;
     background-position: -1100px -100px;
 }
-#relaxed {
-    background-image: url('../img/relaxed-man.jpg');
+#center {
+    background-image: url('../img/relaxed-man-other.jpg');
     background-size: 100%;
 }
-#code {
+#right {
     background-image: url('../img/codecode.jpg');
     background-attachment: fixed;
 }
