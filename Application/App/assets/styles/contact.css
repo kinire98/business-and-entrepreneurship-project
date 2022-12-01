@@ -136,3 +136,9 @@ hr {
 .card:hover > .card-icon {
     color: white;
 }
+#page-code {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+}

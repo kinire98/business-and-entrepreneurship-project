@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 :root {
     --letter: #FFCA5F;
-    --back: #201435;
+    --back: #302455;
     --transparent-white: rgba(255,255,255, .35);
     --card-color: rgb(23,23,23);
+    --letter-dif: #FFCA5F66;
+    --black: rgba(0,0,0,.5);
 }
 * {
     margin: 0;
@@ -12,7 +14,9 @@
     font-family: 'Poppins', sans-serif;
     color: #fff;
 }
-
+html {
+    scrollbar-color: var(--letter) var(--back);
+}
 body {
     background: var(--back);
     display: flex;
@@ -26,9 +30,50 @@ body {
 h2 {
     margin-block: 5%;
 }
-.div {
+a {
+    text-decoration: none;
+}
+hr {
+    width: 100%;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: var(--back);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--letter);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--letter-dif);
+}
+.section {
     margin-block: 10vh;
 }
+/**title**/
+#title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: var(--transparent-white);
+    background-image: radial-gradient(var(--back) 3px, transparent 0);
+    background-size: 40px 40px;
+    background-attachment: fixed;
+    margin-block-end: 0;
+}
+#title > h1 {
+    background: var(--back);
+    padding: 2%;
+    border-radius: 2rem;
+}
+
 /*who am I div*/
 
 #who-am-I {
@@ -36,12 +81,16 @@ h2 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 90vh;
+    height: 100vh;
+    width: 100%;
+    background: var(--transparent-white);
+    margin-block: 0;
 }
 #who-am-I > .internals {
     display: flex;
     align-items: center;
     flex-direction: row;
+    width: 100%;
 }
 .internals > ul {
     list-style-type: none;
@@ -49,6 +98,11 @@ h2 {
 }
 .internals > ul > li {
     margin-block: 35px;
+}
+.internals > img {
+    width: 50%;
+    height: 100%;
+    zoom: 5%;
 }
 .internals  span {
     display: inline-block;
@@ -92,6 +146,7 @@ h2 {
     top:20px;
     background: rgba(0,0,0,.5);
     border-radius: 5rem;
+    transition: .3s width;
 }
 .bar {
     display: inline-block;
@@ -105,11 +160,26 @@ h2 {
 .font-size {
     font-size: 75px;
     cursor: pointer;
+    margin-inline: 5%;
 }
-
-/*
-Hover cards
-(https://youtu.be/htGfnF1zN4g)
+ul > li > .appear {
+    display: inline;
+    transform: translate(-25px);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+}
+ul > li:hover >.appear {
+    transform: translate(0px);
+    visibility: visible;
+    opacity: 1;
+}
+ul > li:hover > .bar-container {
+    width: 65%;
+}
+/**
+** Hover cards
+** (https://youtu.be/htGfnF1zN4g)
 */
 #contact {
     display: flex;
@@ -117,6 +187,17 @@ Hover cards
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    margin-block: 0;
+    padding-block: 5Vh;
+    background: var(--transparent-white);
+    background-image: radial-gradient(var(--back) 3px, transparent 0);
+    background-size: 40px 40px;
+    background-attachment: fixed;
+}
+#contact > h2 {
+    padding: 15px;
+    background-color: var(--back);
+    border-radius: 2rem;
 }
 #cards {
     display: flex;
@@ -150,7 +231,7 @@ Hover cards
 }
 .card::before {
     background: radial-gradient(
-    1000px circle at var(--mouse-x) var(--mouse-y),
+        600px circle at var(--mouse-x) var(--mouse-y),
         var(--color),
         transparent 40%
     );
@@ -159,7 +240,7 @@ Hover cards
 
 .card > .card-border {
     background: radial-gradient(
-        1000px circle at var(--mouse-x) var(--mouse-y),
+        300px circle at var(--mouse-x) var(--mouse-y),
         var(--color),
         transparent 40%
     );
@@ -185,12 +266,14 @@ Hover cards
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
 }
 .card-content > span {
     z-index: 4;
     opacity: 0;
     transition: .5s opacity;
     font-size: 35px;
+    position: relative;
 }
 .card:hover > .card-content > span {
     opacity: 1;
@@ -200,6 +283,7 @@ Hover cards
 }
 .card-content > i {
     font-size: 50px;
+    position: relative;
 }
 
 /*Values div*/
@@ -221,4 +305,234 @@ Hover cards
 }
 #values i {
     margin-left: 5%;
+}
+/**Compromise**/
+#compromise {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding-inline: 5%;
+    padding-block: 8%;
+    margin-block: 0;
+    text-align: justify;
+    background-image: url('../img/pueblos-de-leon.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+#compromise > .black {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    background: var(--black);
+    z-index: 0;
+    margin-block: 0vh;
+}
+#compromise > * {
+    z-index: 1;
+}
+#know-more {
+    display: inline-block;
+    margin-left: 15%;
+    padding-block: .5rem;
+    padding-inline: 2rem;
+    margin-inline: 5vw;
+    border-radius: 2rem;
+    background: var(--back);
+    border: 2px solid var(--letter);
+    color: var(--letter);
+}
+/**code-cards**/
+.card-hover {
+    aspect-ratio: 1/1.2;
+    border: 0.5vmin solid var(--border);
+    cursor: pointer;
+    position: relative;
+    width: 23vw;
+    background: black;
+    margin: 5vw;
+    margin-block-end: 12vw;
+    border-radius: 1vw;
+}
+
+.card-hover::before {
+    border-radius: 1vw;
+    background: linear-gradient(
+        130deg,
+        transparent 0% 33%,
+        var(--g1) 66%,
+        var(--g2) 83.5%,
+        var(--g3) 100%
+    );
+    background-position: 0% 0%;
+    background-size: 300% 300%;
+    content: "";
+    height: 100%;
+    left:0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    transition: all 350ms ease;
+}
+
+.card-hover:hover::before {
+    background-position: 100% 100%;
+    transform: scale(1.08, 1.03);
+}
+
+.card-content-hover {
+    background: radial-gradient(
+        rgba(255, 255, 255, 0.2) 8%,
+        transparent 8%
+    );
+    background-position: 0% 0%;
+    background-size: 5vmin 5vmin;
+    height: calc(100% - 10vmin);
+    width: calc(100% - 10vmin);
+    padding: 5vmin;
+    transition: background-position 350ms ease;
+    z-index: 2;
+    position: relative;
+    background-attachment: fixed;
+}
+.card-hover:hover > a > .card-content-hover {
+    background-position: -10% 0%;
+    
+}
+.card-title,
+.card-subtitle {
+    font-weight: 400;
+    margin: 0px;
+ }
+
+.card-title {
+    font-size: 3.5vw;
+}
+.card-subtitle {
+    font-size: 1.5vw;
+    margin-top: 1vw;
+}
+.card-subtitle-word {
+    display: inline-block;
+    margin: 0vmin 0.3vmin;
+    position: relative;
+    transform: translateY(40%);
+    transition: none;
+    opacity: 0;
+}
+.card-hover:hover > a > .card-content-hover > .card-subtitle > .card-subtitle-word {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: opacity 0ms, transform 200ms cubic-bezier(.9, .06, .15, .9);
+}
+.card-icon {
+    bottom: 0px;
+    color: var(--border);
+    font-size: 7vmin;
+    left: 0px;
+    margin: 5vmin;
+    position: absolute;
+    transition: color 250ms ease;
+    z-index: 2;position: absolute;
+    width: 5rem;
+}
+.card-hover:hover >  .card-icon {
+    color: white;
+}
+#page-code {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+}
+/**Contact**/
+#contact-end {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 20vh;
+    margin-inline: 7.5vh;
+    margin-block: 0;
+    background: var(--transparent-white);
+    background-image: radial-gradient(var(--back) 3px, transparent 0);
+    background-size: 40px 40px;
+    background-attachment: fixed;
+}
+#contact-end > a {
+    padding-block: .5rem;
+    padding-inline: 2rem;
+    margin-inline: 5vw;
+    border-radius: 2rem;
+    font-size: 20px;
+    background: var(--back);
+    border: 2px solid var(--letter);
+    color: var(--letter);
+    cursor: pointer;
+    transition: all .125s;
+}
+#contact-end  a:hover {
+    background: var(--letter);
+    color: var(--back);
+    text-decoration: underline;
+}
+#contact-end  a:active {
+    border: 2px solid var(--back);
+    background: var(--letter);
+    color: var(--back);
+}
+#contact-end a {
+    text-decoration: none;
+    color: inherit;
+} 
+#contact-end > h5 {
+    background: var(--back);
+    padding-block: .5rem;
+    padding-inline: 2rem;
+    border-radius: 2rem;
+}
+/**Footer**/
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 10vh;
+}
+footer > a,
+footer > a > img {
+    width: 5vw;
+    height: 5vw;
+    margin-inline: 2vw;
+}
+footer > p {
+    font-size: 15px;
+    width: 50vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer a {
+    text-decoration: none;
+    transition: color .3s;
+}
+footer a:hover {
+    color: var(--letter);
+}
+.vl {
+    display: inline-block;
+    border-left: 1px solid white;
+    height: 20px;
+    margin-inline: 15px;
+}
+.vl.big {
+    height: 7.5rem;
+    border-left: 3px solid white;
+}
+#year {
+    margin-inline: 5px;
 }

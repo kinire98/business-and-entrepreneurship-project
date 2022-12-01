@@ -379,6 +379,7 @@ div.hover {
 .compare > h3 {
     background: var(--color);
     padding:5%;
+    margin-block-end: 5%;
 }
 .compare hr {
     color: var(--color);
