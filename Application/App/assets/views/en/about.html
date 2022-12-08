@@ -9,13 +9,14 @@
 </head>
 <body>
     <div id="title">
-        <h1>About me</h1>
+        <h1>Me, myself and I</h1>
+        <div id="back"></div>
+        <div id="points"></div>
     </div>
-    <hr>
     <div id="who-am-I" class="section">
         <h2>Who am I? 🤔 💭</h2>
         <div class="internals">
-            <img src="../../img/me.jpg" alt="">   
+            <!-- <img src="../../img/me.jpg" alt="">    -->
             <ul>
                 <li>
                     <span>Hi!</span> 👋  <br>
@@ -30,10 +31,9 @@
             </ul>
         </div> 
     </div>
-    <hr>
     <div id="skills" class="section">
         <h2>My skills 🔧 🔨</h2>
-        <ul>
+        <!-- <ul>
             <li><span class="font-size"><i class="fa-brands fa-html5 skills" style="--color: #f06529;" aria-hidden=true></i></span>  <p class="appear">90%</p><span class="bar-container" ><span class="bar" style="--width: 90%; --g1:#f06529; --g2:#f06529; --g3:#fff;"></span></span></li>
             <li><span class="font-size"><i class="fa-brands fa-css3-alt skills" style="--color: #2965f1;" aria-hidden=true></i></span> <p class="appear">75%</p> <span class="bar-container" ><span class="bar" style="--width: 75%; --g1:#2965f1; --g2:#2965f1; --g3:#fff;"></span></span></li>
             <li><span class="font-size"><i class="fa-brands fa-square-js skills" style="--color: #f1df1e;" aria-hidden=true></i></span> <p class="appear">95%</p><span class="bar-container"><span class="bar" style="--width: 95%; --g1:#323330; --g2:#f7df1e; --g3:#f7df1e;"></span></span></li>
@@ -41,9 +41,35 @@
             <li><span class="font-size"><i class="fa-brands fa-wordpress-simple skills" style="--color: #38618c;" aria-hidden=true></i></span> <p class="appear">50%</p><span class="bar-container"><span class="bar" style="--width: 50%; --g1:#38618c; --g2:#eeeeee; --g3:#eeeeee;"></span></span></li>
             <li><span class="font-size">🇪🇸</span><p class="appear">Native</p><span class="bar-container"><span class="bar" style="--width: 100%; --g1:#ad1519; --g2:#fabd00; --g3:#ad1519;"></span></span></li>
             <li><span class="font-size">🇬🇧</span><p class="appear">80%</p><span class="bar-container"><span class="bar" style="--width: 80%; --g1:#fff; --g2:#c8102e; --g3:#022169;"></span></span></li>
-        </ul>
+        </ul> -->
+        <div class="row">
+            <div id="dinamism">
+                <button class="fancy-button">
+                    <div id="lines">
+                        <div id="left-lines">
+                            <div class="lines" style="--angle: 35deg; --animation:top-left"></div>
+                            <div class="lines" style="--angle: 0deg; --animation: left"></div>
+                            <div class="lines" style="--angle: -35deg; --animation:bottom-left"></div>
+                        </div>
+                        <div id="right-lines">
+                            <div class="lines" style="--angle: -35deg; --animation:top-right"></div>
+                            <div class="lines" style="--angle: 0deg; --animation:right"></div>
+                            <div class="lines" style="--angle: 35deg; --animation: bottom-right"></div>
+                        </div>
+                    </div>
+                    <p>Dinamism</p>
+                </button>
+            </div>
+            <div id="speed">
+                <div id="movement">
+                    <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+                    <p>speed</p>
+                </div>
+            </div>
+            <div id="original"></div>
+        </div>
+
     </div> 
-    <hr>
     <div id="contact" class="section">
         <h2>Talk to me or check what I'm working on <br><span style="font-size: 10px;">(unless it's a secret 🤫)</span></h2>
         <div id="cards">
@@ -86,21 +112,10 @@
             </div>
         </div>
     </div>
-    <hr>
     <div id="values" class="section">
         <h2>How I work</h2>
-        <ul>
-            <li>💪 Discipline and hard work 💪, <br> my core values</li>
-            <li>
-                Collaboration and communication, <br>fundamental for me
-                <ul id="margin">
-                    <li>That's why I prefer the sentence <br> <b><i>"I work WITH you"</i></b> <br> rather than <i>"I work for you"</i> </li>
-                </ul>
-            </li>
-            <li>I provide energy, youth, ambition and new ideas for my projects</li>
-        </ul>
+        
     </div>
-    <hr>
     <div id="compromise" class="section">
         <div class="black"></div>
         <h2>My compromise with the "Empty Spain"</h2>
@@ -112,7 +127,6 @@
             <a href="" id="know-more">Know more -></a>
         </p>
     </div>
-    <hr>
     <div id="page-code" class="section">
         <h3>👉 Check out this page's code 👉</h3>
         <div class="card-hover" style="--border:#6e5494; --g1:#333; --g2:#c9520c; --g3:#f5f5f5;">
@@ -130,12 +144,10 @@
             
         </div>       
     </div>
-    <hr>
     <div class="section" id="contact-end">
         <h5>Any doubts? Don't know what you need?</h5>
         <a href="#/Contact">Contact with me -></a>
     </div>
-    <hr>
     <footer>
         <p>© <span id="year"> </span> Iker Nieto Garrido. All Rights reserved</p>
         <a href="#"><img src="../../img/mainLogo.png" alt=""></a>
@@ -147,7 +159,6 @@
             <a href="#/Privacy">Privacy policy</a>
         </p>
     </footer>
-
     <script src="../../scripts/about.js" type="module"></script>
     <script src="https://kit.fontawesome.com/5e899d16e4.js" crossorigin="anonymous"></script>
 </body>

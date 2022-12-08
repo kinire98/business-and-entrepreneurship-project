@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+:root {
+    --letter: #FFCA5F;
+    --back: #302455;
+    --transparent-white: rgba(255,255,255, .35);
+    --card-color: rgb(23,23,23);
+    --letter-dif: #FFCA5Faa;
+    --black: rgba(0,0,0,.5);
+}
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +16,7 @@
 }
 
 body {
-    background: #302455;
+    background: var(--back);
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -23,6 +31,7 @@ body {
     position: relative;
     right: -10vw;
     z-index: 2;
+    background: var(--back);
 }
 
 
@@ -30,9 +39,9 @@ body {
 #first {
     font-size: 10vw;
 }
-b {
+strong {
     z-index: 2;
-    color:#FFCA5F;
+    color:var(--letter);
     font-weight: 9000;
 }
 #third {
@@ -44,13 +53,13 @@ b {
     right: 1vw;
     bottom: 1vh;
     font-size: 2.5vw;
-    background: #FFCA5F;
+    background: var(--letter);
     padding-inline: 5vw;
     border-radius: 5vw;
 }
 
 #bottom-left a { 
-    color: #201435;
+    color: var(--back);
     text-decoration: none;
     transition: text-decoration .3s;
 }
