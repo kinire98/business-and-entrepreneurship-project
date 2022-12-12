@@ -80,7 +80,7 @@ a:hover > i, a:hover > img {
     height: 100vh;
     width: 100%;
     background: white;
-    background-image: radial-gradient(var(--back) 3px, transparent 0);
+    background-image: radial-gradient(var(--back) 3px, transparent 0px);
     background-size: 40px 40px;
     background-attachment: fixed;
 }
@@ -291,10 +291,10 @@ div.hover {
 .card-content {
     background-image: radial-gradient(
         var(--back) 3px,
-        transparent 8%
+        transparent 0px
         );
     background-position: 0% 0%;
-    background-size: 5vmin 5vmin;
+    background-size: 40px 40px;
     height: calc(100% - 10vmin);
     width: calc(100% - 10vmin);
     padding: 5vmin;
