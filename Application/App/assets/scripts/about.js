@@ -7,7 +7,7 @@ import env from "../../helpers/env.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    glowCards();
+    // glowCards();
     getYear();
     cardText();
     openLink(env.github_page, ".card-icon");

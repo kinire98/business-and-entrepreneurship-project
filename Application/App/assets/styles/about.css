@@ -18,6 +18,22 @@
 html {
     scrollbar-color: var(--letter) var(--back);
 }
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: var(--back);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--letter);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--letter-dif);
+}
 body {
     background: var(--back);
     display: flex;
@@ -37,30 +53,19 @@ a {
 hr {
     width: 100%;
 }
-::-webkit-scrollbar {
-    width: 15px;
-}
-::-webkit-scrollbar-track {
-    background: var(--back);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: var(--letter);
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: var(--letter-dif);
-}
 .section {
     margin-block: 10vh;
 }
-.row {
+.row, .column {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.row {
     flex-direction: row;
+}
+.column {
+    flex-direction: column;
 }
 .black {
     position: absolute;
@@ -71,6 +76,16 @@ hr {
     background: var(--black);
     z-index: 0;
     margin-block: 0vh;
+}
+.vl {
+    display: inline-block;
+    border-left: 1px solid white;
+    height: 20px;
+    margin-inline: 15px;
+}
+.vl.big {
+    height: 7.5rem;
+    border-left: 3px solid white;
 }
 /**title**/
 #title {
@@ -636,8 +651,6 @@ ul > li:hover > .bar-container {
     font-size: 50px;
     position: relative;
 }
-
-
 /**Compromise**/
 #compromise {
     display: flex;
@@ -734,8 +747,10 @@ ul > li:hover > .bar-container {
     border-radius: 36%;
     z-index: 0;
 }
-/**code-cards**/
-.card-hover {
+
+
+/**code-cards*/
+/* .card-hover {
     aspect-ratio: 1/1.2;
     border: 0.5vmin solid var(--border);
     cursor: pointer;
@@ -836,15 +851,15 @@ ul > li:hover > .bar-container {
     align-items: center;
     justify-content: space-between;
     width: 75%;
-}
+} */
 /**Contact**/
-#contact-end {
+#contact {
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    height: 20vh;
+    height: 65vh;
     margin-inline: 7.5vh;
     margin-block: 0;
     background: var(--transparent-white);
@@ -852,7 +867,7 @@ ul > li:hover > .bar-container {
     background-size: 40px 40px;
     background-attachment: fixed;
 }
-#contact-end > a {
+#contact > a {
     padding-block: .5rem;
     padding-inline: 2rem;
     margin-inline: 5vw;
@@ -864,25 +879,28 @@ ul > li:hover > .bar-container {
     cursor: pointer;
     transition: all .125s;
 }
-#contact-end  a:hover {
+#contact  a:hover {
     background: var(--letter);
     color: var(--back);
     text-decoration: underline;
 }
-#contact-end  a:active {
+#contact  a:active {
     border: 2px solid var(--back);
     background: var(--letter);
     color: var(--back);
 }
-#contact-end a {
+#contact a {
     text-decoration: none;
     color: inherit;
 } 
-#contact-end > h5 {
+#contact  h5 {
     background: var(--back);
     padding-block: .5rem;
     padding-inline: 2rem;
     border-radius: 2rem;
+}
+#contact p {
+
 }
 /**Footer**/
 footer {
@@ -912,16 +930,7 @@ footer a {
 footer a:hover {
     color: var(--letter);
 }
-.vl {
-    display: inline-block;
-    border-left: 1px solid white;
-    height: 20px;
-    margin-inline: 15px;
-}
-.vl.big {
-    height: 7.5rem;
-    border-left: 3px solid white;
-}
+
 #year {
     margin-inline: 5px;
 }
