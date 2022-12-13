@@ -49,7 +49,58 @@ hr {
 hr.complete {
     width: 100%;
 }
-
+/**E-mail form**/
+#email-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding-block: 25vh;
+}
+#email-form > form {
+    width: 65%;
+    height: 100%;
+    font-size: 25px;
+} 
+#email-form > form > fieldset {
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--letter);
+}
+#email-form > form > fieldset > legend {
+    padding: .5rem;
+}
+#email-form input {
+    margin: .5rem;
+    padding: .5rem;
+    border: 1px solid var(--letter);
+    border-radius: .25rem;
+    background: var(--back);
+    color: white;
+    width: 46%;
+    font-size: 20px;
+}
+#email-form input[type="submit"] {
+    transform: translate(50%);
+    cursor: pointer;
+}
+#email-form textarea {
+    width: 96%;
+    height: 10rem;
+    padding: .5rem;
+    margin-block: 1rem;
+    border: 1px solid var(--letter);
+    border-radius: .25rem;
+    background: var(--back);
+    color: white;
+    resize: none;
+    font-size: 15px;
+    transform: translateX(.75%);
+}
+#gmail {
+    padding: 0;
+    margin: 0;
+}
 /*Contact-cards*/
 #contact-cards {
     display: flex;

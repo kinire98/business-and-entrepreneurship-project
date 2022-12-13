@@ -13,6 +13,33 @@
         <h2>👇 How to contact me or see some of my work👇</h2>
     </div>
     <hr class="complete">
+    <div id="email-form">
+        <div class="card" id="gmail" style="--border:#bb001b; --g1:#4285f4; --g2:#34a853; --g3:#fbbc05;">
+            <div class="card-content">
+                <h3 class="card-title">
+                    Mail
+                </h3>
+                <h4 class="card-subtitle" data-text="For a more formal request or a bigger project">
+                    
+                </h4>
+            </div>
+            <i class="fa-solid fa-envelope card-icon" aria-hidden=true></i>
+        </div>
+        <form id="email">
+            <fieldset>
+                <legend>
+                    👇 Enter your data 👇
+                </legend>
+                <input type="text" name="name" placeholder="Write your name..." title="Name only admits uppercase, lowercase and blank spaces" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$" required>
+                <input type="text" name="enterprise" placeholder="Write the name of your bussiness..." title="Negocio solo admite mayúsculas, minúsculas y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$"><br>
+                <input type="email" name="email" id="email" placeholder="Write your e-mail here..." title="Write your e-mail" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                <input type="text" name="subject" id="subject" placeholder="Asunto a tratar..." pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$"><br>
+                <textarea type="text" name="comments" id="comments" placeholder="Write what you think or what you need..." pattern="^[\s\S]{1,1023}" title="Tu comentario no debe exceder los 1023 caracteres" cols="40" rows="5"  required></textarea><br>
+                <input type="hidden" name="_subject" id="_subject" value="Reply to: "><br>
+                <input type="submit" value="Send" title="Send me an email"><br>
+            </fieldset>
+        </form>
+    </div>
     <div id="contact-cards">
         <div class="inner-contact-cards">
             <div class="card" style="--border:#feda77; --g1:#f58529; --g2:#dd2a7b; --g3:#8134af;">
@@ -99,18 +126,7 @@
                     </h4>
                 </div>
                 <i class="fa-brands fa-discord card-icon" aria-hidden=true></i>
-            </div>
-            <div class="card" style="--border:#bb001b; --g1:#4285f4; --g2:#34a853; --g3:#fbbc05;">
-                <div class="card-content">
-                    <h3 class="card-title">
-                        Mail
-                    </h3>
-                    <h4 class="card-subtitle" data-text="For a more formal request or a bigger project">
-                        
-                    </h4>
-                </div>
-                <i class="fa-solid fa-envelope card-icon" aria-hidden=true></i>
-            </div>
+            </div> 
             <div class="card" style="--border:#075e54; --g1:#0b5048; --g2:#25d366; --g3:#ece5dd;">
                 <div class="card-content">
                     <h3 class="card-title">
