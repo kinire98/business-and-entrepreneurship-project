@@ -2,7 +2,8 @@ import { ajaxHelper } from "../../../helpers/ajaxHelper.js";
 
 export function email(eMail) {
 
-
+    const $loader = document.querySelector("#email-form img"),
+        $submit = document.querySelector('#email-form input[type="submit"]');
     
 
 
@@ -10,7 +11,9 @@ export function email(eMail) {
     document.addEventListener("submit",  (e) => {
         if (e.target != document.getElementById("email")) return null;
         e.preventDefault();
-        e.target.querySelector('[type="hidden"]').value = "Reply to " + e.target.querySelector('[name="subject"]').value + ":"
+        e.target.querySelector('[type="hidden"]').value = "Reply to " + e.target.querySelector('[type="hidden"]').value + ":";
+        $loader.style.display = "block";
+        $submit.style.display = "none";
         ajaxHelper({
             URL: eMail,
             method: "POST",
@@ -21,11 +24,12 @@ export function email(eMail) {
             body: new FormData(e.target),
             success: (json) => {
                 console.log(json)
-                document.write(json)
+                document.querySelector("legend").innerHTML = "Thank you for you submission!"
+                $loader.style.display = "none";
             },
             error: (err) => {
-                console.log(err)
-                document.write(err)
+                document.querySelector("legend").innerHTML = "Sorry! There was an error"
+                $loader.style.display = "none";
             }
         })
     })

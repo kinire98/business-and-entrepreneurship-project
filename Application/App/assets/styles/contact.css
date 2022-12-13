@@ -70,7 +70,7 @@ hr.complete {
 #email-form > form > fieldset > legend {
     padding: .5rem;
 }
-#email-form input {
+#email-form input, #email-form select {
     margin: .5rem;
     padding: .5rem;
     border: 1px solid var(--letter);
@@ -79,6 +79,9 @@ hr.complete {
     color: white;
     width: 46%;
     font-size: 20px;
+}
+#email-form #type {
+    width: 96%;
 }
 #email-form input[type="submit"] {
     transform: translate(50%);
@@ -96,6 +99,12 @@ hr.complete {
     resize: none;
     font-size: 15px;
     transform: translateX(.75%);
+}
+#email-form img {
+    position: relative;
+    width: 15%;
+    left: 41.75%;
+    display: none;
 }
 #gmail {
     padding: 0;

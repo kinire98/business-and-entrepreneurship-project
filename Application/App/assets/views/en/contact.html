@@ -30,13 +30,23 @@
                 <legend>
                     👇 Enter your data 👇
                 </legend>
-                <input type="text" name="name" placeholder="Write your name..." title="Name only admits uppercase, lowercase and blank spaces" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$" required>
-                <input type="text" name="enterprise" placeholder="Write the name of your bussiness..." title="Negocio solo admite mayúsculas, minúsculas y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$"><br>
-                <input type="email" name="email" id="email" placeholder="Write your e-mail here..." title="Write your e-mail" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
-                <input type="text" name="subject" id="subject" placeholder="Asunto a tratar..." pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$"><br>
-                <textarea type="text" name="comments" id="comments" placeholder="Write what you think or what you need..." pattern="^[\s\S]{1,1023}" title="Tu comentario no debe exceder los 1023 caracteres" cols="40" rows="5"  required></textarea><br>
+                <input type="text" name="name" placeholder="Write your name...  *" title="This field only admits uppercase, lowercase and blank spaces" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$" required>
+                <input type="text" name="enterprise" placeholder="Write the name of your bussiness..." title="This field only admits uppercase, lowercase and blank spaces" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$"><br>
+                <input type="email" name="email" id="email" placeholder="Write your e-mail here... *" title="Write your e-mail" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                <input type="text" name="_subject" id="subject" placeholder="Subject of the e-mail... *" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$"><br>
+                <select name="type" id="type" aria-placeholder="type">
+                    <option value="Nothing selected">Select an option</option>
+                    <option value="Bronze web page">Bronze page</option>
+                    <option value="Silver web page">Silver page</option>
+                    <option value="Gold web page">Gold page</option>
+                </select>
+                <textarea type="text" name="comments" id="comments" placeholder="Write what you think or what you need...  *" pattern="^[\s\S]{1,1023}" title="Tu comentario no debe exceder los 1023 caracteres" cols="40" rows="5"  required></textarea><br>
+                <input type="submit" value="Send" name="submit" title="Send me an email"><br>
+
+
                 <input type="hidden" name="_subject" id="_subject" value="Reply to: "><br>
-                <input type="submit" value="Send" title="Send me an email"><br>
+
+                <img src="../../svg/loader.svg" alt="Cargando...">
             </fieldset>
         </form>
     </div>
