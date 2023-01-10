@@ -416,9 +416,7 @@ ul > li:hover > .bar-container {
 }
 
 
-#speed {
-    
-}
+
 #movement {
     display: flex;
     align-items: center;
@@ -540,11 +538,11 @@ ul > li:hover > .bar-container {
     transition: all .3s;
 }
 
-/**
+/* /**
 ** Hover cards
 ** (https://youtu.be/htGfnF1zN4g)
 */
-#contact {
+/* #contact {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -554,9 +552,9 @@ ul > li:hover > .bar-container {
     margin-block: 0;
     padding-block: 5Vh;
     background: var(--transparent-white);
-    /* background-image: radial-gradient(var(--back) 3px, transparent 0px); */
+    /* background-image: radial-gradient(var(--back) 3px, transparent 0px);
     background-image: url('../img/contact.jpg');
-    /* background-size: 40px 40px; */
+    /* background-size: 40px 40px; 
     background-attachment: fixed;
     background-size: cover;
 }
@@ -632,7 +630,6 @@ ul > li:hover > .bar-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    position: relative;
 }
 .card-content > span {
     z-index: 4;
@@ -650,7 +647,7 @@ ul > li:hover > .bar-container {
 .card-content > i {
     font-size: 50px;
     position: relative;
-}
+}*/
 /**Compromise**/
 #compromise {
     display: flex;
@@ -899,9 +896,7 @@ ul > li:hover > .bar-container {
     padding-inline: 2rem;
     border-radius: 2rem;
 }
-#contact p {
 
-}
 /**Footer**/
 footer {
     display: flex;

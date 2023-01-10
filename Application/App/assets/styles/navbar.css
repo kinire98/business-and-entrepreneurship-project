@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+:root {
+    --back: #302455;
+    --letter: #FFCA5F;
+}
 * {
     margin: 0;
     padding: 0;
@@ -13,10 +17,21 @@ body {
     min-height: 100vh;
     background: #333;
 }
+aside {
+    height: 100vh;
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --bronze: #804a00;
+    --silver: #b2b2b2;
+    --gold: #bf9b30;
+
+}
 .navigation {
     position: relative;
     width: 70px;
-    height: 350px;
+    height: 560px;
     background: #fff;
     border-radius: 35px;
     box-shadow: 0 15px 25px rgba(0,0,0,.1);
@@ -139,19 +154,36 @@ body {
 .navigation > ul > li:nth-child(5).active ~ .indicator {
     transform: translateY(calc(70px * 4));
 }
-
+.navigation > ul > li:nth-child(6).active ~ .indicator {
+    transform: translateY(calc(70px * 5));
+}
+.navigation > ul > li:nth-child(7).active ~ .indicator {
+    transform: translateY(calc(70px * 6));
+}
+.navigation > ul > li:nth-child(8).active ~ .indicator {
+    transform: translateY(calc(70px * 7));
+}
 .navigation > ul > li:nth-child(1).active ~ .indicator::before {
-    background: #f53b57;
+    background: var(--letter);
 }
 .navigation > ul > li:nth-child(2).active ~ .indicator::before {
-    background: #3c40c6;
+    background: var(--letter);
 }
 .navigation > ul > li:nth-child(3).active ~ .indicator::before {
-    background: #05c46b;
+    background: var(--bronze);
 }
 .navigation > ul > li:nth-child(4).active ~ .indicator::before {
-    background: #0fbcf9;
+    background: var(--silver);
 }
 .navigation > ul > li:nth-child(5).active ~ .indicator::before {
-    background: #ffa801;
+    background: var(--gold);
+}
+.navigation > ul > li:nth-child(6).active ~ .indicator::before {
+    background: var(--letter);
+}
+.navigation > ul > li:nth-child(7).active ~ .indicator::before {
+    background: var(--letter);
+}
+.navigation > ul > li:nth-child(8).active ~ .indicator::before {
+    background: var(--letter);
 }

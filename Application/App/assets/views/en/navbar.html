@@ -6,54 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../styles/navbar.css">
+    <link rel="stylesheet" href="../../fontawesome/css/pro.min.css">
 </head>
 <body>
-    <div class="navigation">
-        <ul>
-            <li class="list active" data-color="#f53b57">
-                <a href="#">
-                    <span class="icon"><i class="fa-solid fa-house" aria-hidden="true"></i></span>
-                    <span class="title">Home</span>
-                </a>
-            </li>
-            <li class="list" data-color="#3c40c6">
-                <a href="#">
-                    <span class="icon"><i class="fa-solid fa-user-gear" aria-hidden="true"></i></span>
-                    <span class="title">Services</span>
-                </a>
-            </li>
-            <li class="list" data-color="#05c46b">
-                <a href="#">
-                    <span class="icon"><i class="fa-solid fa-coins" aria-hidden="true"></i></span>
-                    <span class="title">
-                        <!-- <ul>
-                            <li><a href="#/Bronze">Bronze</a></li>
-                            <li><a href="#/Silver">Silver</a></li>
-                            <li><a href="#/Gold">Gold</a></li>
-                        </ul> -->
-                        <ul>
-                            <li><span data-href="#/bronze">Bronze</span></li>
-                            <li><span data-href="#/silver">Silver</span></li>
-                            <li><span data-href="#/gold">Gold</span></li>
-                        </ul>
-                    </span>
-                </a>
-            </li>
-            <li class="list" data-color="#0fbcf9">
-                <a href="#">
-                    <span class="icon"><i class="fa-solid fa-address-card" aria-hidden="true"></i></span>
-                    <span class="title">About</span>
-                </a>
-            </li> 
-            <li class="list" data-color="#ffa801">
-                <a href="#">
-                    <span class="icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
-                    <span class="title">Contact</span>
-                </a>
-            </li>
-            <div class="indicator"></div>
-        </ul>
-    </div>
+    <aside>
+        <div class="navigation">
+            <ul>
+                <li class="list active" data-color="#302455">
+                    <a href="#">
+                        <span class="icon"><i class="fa-duotone fa-house" aria-hidden="true"></i></span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+                <li class="list" data-color="#302455">
+                    <a href="#">
+                        <span class="icon"><i class="fa-duotone fa-code" aria-hidden="true"></i></span>
+                        <span class="title">Services</span>
+                    </a>
+                </li>
+                <li class="list" data-color="#804a00">
+                    <a href="#">
+                        <span class="icon"><i class="fa-duotone fa-coins" aria-hidden="true"></i></span>
+                        <span class="title">Bronze page</span>
+                    </a>
+                </li>
+                <li class="list" data-color="#b2b2b2">
+                    <a href="#">
+                        <span class="icon"><i class="fa-duotone fa-coin" aria-hidden="true"></i></span>
+                        <span class="title">Silver page</span>
+                    </a>
+                </li> 
+                <li class="list" data-color="#bf9b30">
+                    <a href="#">
+                        <span class="icon"><i class="fa-duotone fa-medal" aria-hidden="true"></i></span>
+                        <span class="title">Gold page</span>
+                    </a>
+                </li> 
+                <li class="list" data-color="#302455">
+                    <a href="#">
+                        <span class="icon"><i class="fa-duotone fa-address-card" aria-hidden="true"></i></span>
+                        <span class="title">About</span>
+                    </a>
+                </li> 
+                <li class="list" data-color="#302455">
+                    <a href="#">
+                        <span class="icon"><i class="fa-duotone fa-phone" aria-hidden="true"></i></span>
+                        <span class="title">Contact</span>
+                    </a>
+                </li>
+                <li class="list" data-color="#302455">
+                    <a href="#">
+                        <span class="icon"><i class="fa-duotone fa-mountain-sun" aria-hidden="true"></i></span>
+                        <span class="title">My compromise</span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+            </ul>
+        </div>
+    </aside>
+
     <script>
         let list = document.querySelectorAll("li.list")
         for (let i = 0; i < list.length; i++) {
@@ -68,10 +79,10 @@
 
         list.forEach(el => {
             el.addEventListener("click", (e) => {
-                document.querySelector("body").style.background = el.dataset.color;
+                document.querySelector("aside").style.background = el.dataset.color;
             })
         })
     </script>
-    <script src="https://kit.fontawesome.com/5e899d16e4.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/5e899d16e4.js" crossorigin="anonymous"></script> -->
 </body>
 </html>
