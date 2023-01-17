@@ -1,3 +1,9 @@
 import { getYear } from "./modules/getYear.js";
+import { reveals } from "./modules/reveals.js";
 
-getYear(); 
+document.addEventListener("DOMContentLoaded", () => {
+    getYear(); 
+    reveals();
+})
+window.addEventListener("scroll", reveals)
+

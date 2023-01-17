@@ -63,6 +63,10 @@ hr {
 a {
     text-decoration: none;
 }
+a:hover > i, a:hover > img {
+    transform: scale(1.05, 1.03);
+    cursor: pointer;
+}
 abbr {
     cursor: pointer;
 }
@@ -255,6 +259,7 @@ footer > a > img {
     width: 5vw;
     height: 5vw;
     margin-inline: 2vw;
+    transition: all .3s ease;
 }
 footer > p {
     font-size: 15px;

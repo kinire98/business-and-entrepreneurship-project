@@ -53,6 +53,10 @@ a {
 hr {
     width: 100%;
 }
+a:hover > i, a:hover > img {
+    transform: scale(1.05, 1.03);
+    cursor: pointer;
+}
 .section {
     margin-block: 10vh;
 }
@@ -155,7 +159,7 @@ hr {
 }
 #who-am-I > h2 {
     background: var(--letter);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 3rem;
 }
 #who-am-I > .internals {
@@ -167,19 +171,19 @@ hr {
 }
 .internals > ul {
     list-style-type: none;
-    margin-inline: 5%;
+    margin-inline: 2.5%;
     width: auto;
     display: inline;
     border-radius: 6rem;
     background: var(--letter-dif);
-    padding: 3rem;
+    padding: 2rem;
 }
 .internals > ul > li {
     margin-block: 35px;
 }
 .internals  span {
     display: inline-block;
-    font-size: calc(2vw + 15px);
+    font-size: calc(1vw + 15px);
 }
 
 /*Skills div*/
@@ -196,9 +200,9 @@ hr {
     content: "My skills 🔧 🔨";
     transition: content .3s;
 }
-#skills > h2:hover::before {
+/* #skills > h2:hover::before {
     content: "Hover your mouse over the titles ;)";
-}
+} */
 #skills > .row  {
     width: 100%;
 }
@@ -206,62 +210,6 @@ hr {
     width: 28.33%;
     margin-inline: 5%;
 }
-/* #skills > ul {
-    width: 60%;
-    font-size: 50px;
-    list-style-type: none;
-}
-#skills > ul > li {
-    width: 100%;
-    position: relative;
-}
-.skills {
-    text-align: center;
-    color: var(--color);
-    border-radius: 1rem;
-    padding: 5px;
-    padding-inline: 10px;
-}
-.bar-container {
-    display: inline-block;
-    width: 80%;
-    height: 50px;
-    position: absolute;
-    right: 0;
-    top:20px;
-    background: rgba(0,0,0,.5);
-    border-radius: 5rem;
-    transition: .3s width;
-}
-.bar {
-    display: inline-block;
-    width: var(--width);
-    height: 50px;
-    border-radius: 5rem;
-    background: linear-gradient(135deg, var(--g1), var(--g2), var(--g3));
-    position: relative;
-    bottom: 6px;
-}
-.font-size {
-    font-size: 75px;
-    cursor: pointer;
-    margin-inline: 5%;
-}
-ul > li > .appear {
-    display: inline;
-    transform: translate(-25px);
-    visibility: hidden;
-    opacity: 0;
-    transition: all .3s;
-}
-ul > li:hover >.appear {
-    transform: translate(0px);
-    visibility: visible;
-    opacity: 1;
-}
-ul > li:hover > .bar-container {
-    width: 65%;
-}  */
 .fancy-button {
     display: flex;
     align-items: center;
@@ -519,14 +467,14 @@ ul > li:hover > .bar-container {
     transition: all .3s;
     font-size: 50px;
 }
-.fa-solid.fa-lightbulb.lightbulb {
+#lightbulb:hover .fa-duotone.fa-lightbulb.lightbulb {
     color: var(--letter);
     display: flex;
     align-items: flex-start;
     justify-content: center;
     position: relative;
 }
-.fa-solid.fa-lightbulb.lightbulb > .lines {
+#lightbulb:hover .fa-duotone.fa-lightbulb.lightbulb > .lines {
     width: 15px;
     height: 7.5px;
     border-radius: 5px;
@@ -909,6 +857,7 @@ footer > a > img {
     width: 5vw;
     height: 5vw;
     margin-inline: 2vw;
+    transition: all .3s ease;
 }
 footer > p {
     font-size: 15px;

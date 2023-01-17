@@ -442,6 +442,7 @@ div.hover {
     background-image: url('../img/myDesktop.jpg');
     background-size: cover;
     /* background-attachment: fixed; */
+    border-right: 1px solid white;
 }
 #second {
     width: 35%;
@@ -449,6 +450,7 @@ div.hover {
     margin-inline-end: 0;
     background-image: url('../img/me.jpg');
     background-size: 400%;
+    border-left: 1px solid white;
 }
 #me a {
     margin-block: 2vh;
@@ -516,7 +518,7 @@ div.hover {
     padding-block: .5rem;
     padding-inline: 2rem;
     border-radius: 2rem;
-}
+} 
 /**Footer**/
 footer {
     display: flex;
@@ -529,6 +531,7 @@ footer > a > img {
     width: 5vw;
     height: 5vw;
     margin-inline: 2vw;
+    transition: all .3s ease;
 }
 footer > p {
     font-size: 15px;

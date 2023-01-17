@@ -4,45 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "41d07335b5c357e0",
+        "id": "dfad93fc0fb4c649",
         "type": "tabs",
         "children": [
           {
-            "id": "181c615ce4b1ac0a",
+            "id": "5c43074e47406ab7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "About/Content.md",
-                "mode": "preview",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "ac1d9cf301b3edb6",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.1.8"
-              }
-            }
-          },
-          {
-            "id": "ff0052f07a2c45db",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Home/Content.md",
-                "mode": "preview",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "About/Content.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,17 +99,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "ac1d9cf301b3edb6",
+  "active": "5c43074e47406ab7",
   "lastOpenFiles": [
+    "Home/Content.md",
+    "Blog/Blog.md",
     "Pricing examples.md",
     "About/Content.md",
     "About/About page.md",
     "Services/Content.md",
     "Contact/Content.md",
     "Website content.md",
-    "Home/Content.md",
     "Home/Home page.md",
-    "Services/Services page.md",
-    "Nav bar/Nav bar.md"
+    "Services/Services page.md"
   ]
 }

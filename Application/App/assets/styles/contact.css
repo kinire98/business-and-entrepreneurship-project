@@ -30,6 +30,10 @@ h2 {
 }
 hr {
     width: 75%;
+} 
+a:hover > i, a:hover > img {
+    transform: scale(1.05, 1.03);
+    cursor: pointer;
 }
 .row {
     display: flex;
@@ -220,7 +224,7 @@ hr.complete {
     font-size: 7vmin;
     left: 0px;
     margin: 5vmin;
-    position: absolute;
+    position: absolute !important;
     transition: color 250ms ease;
     z-index: 2;
     width: 5rem;
@@ -236,6 +240,7 @@ hr.complete {
     flex-direction: column;
     width: 100%;
     height: 85vh;
+    padding-block: 15vh;
 }
 #page-code > .card {
     aspect-ratio: 1/0.8;
@@ -277,6 +282,7 @@ footer > a > img {
     width: 5vw;
     height: 5vw;
     margin-inline: 2vw;
+    transition: all .3s ease;
 }
 footer > p {
     font-size: 15px;

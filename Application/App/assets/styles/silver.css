@@ -11,7 +11,7 @@
     padding: 0;
     box-sizing: inherit;
     font-family: 'Poppins', sans-serif;
-    color: #fff;
+    color: var(--letter);
 }
 html {
     scrollbar-color: var(--letter) var(--back);
@@ -63,6 +63,10 @@ a {
     text-decoration: none;
 }
 abbr {
+    cursor: pointer;
+}
+a:hover > i, a:hover > img {
+    transform: scale(1.05, 1.03);
     cursor: pointer;
 }
 .vl {
@@ -164,6 +168,7 @@ abbr {
     background-attachment: fixed;
     background-size: 125%;
     background-position: -1100px -100px;
+    color: #fff;
 }
 #center {
     background-image: url('../img/relaxed-man.jpg');
@@ -172,6 +177,9 @@ abbr {
 #right {
     background-image: url('../img/codecode.jpg');
     background-attachment: fixed;
+}
+div.back-img > p, div.back-img > h3 {
+    color: #fff;
 }
 #extra-features > .back-img > .black {
     position: absolute;
@@ -252,6 +260,7 @@ footer > a > img {
     width: 5vw;
     height: 5vw;
     margin-inline: 2vw;
+    transition: all .3s ease;
 }
 footer > p {
     font-size: 15px;

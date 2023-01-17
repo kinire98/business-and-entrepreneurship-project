@@ -54,6 +54,10 @@ a {
 hr {
     width: 100%;
 }
+a:hover > i, a:hover > img {
+    transform: scale(1.05, 1.03);
+    cursor: pointer;
+}
 .section {
     margin-block: 10vh;
 }
@@ -148,25 +152,25 @@ div.middle > p {
 }
 #about > a {
     padding-block: .5rem;
-    padding-inline: 2rem;
-    margin-inline: 5vw;
-    margin-block: 15px;
-    border-radius: 2rem;
-    font-size: 20px;
-    background: var(--back);
-    border: 2px solid var(--letter);
-    color: var(--letter);
-    cursor: pointer;
-    text-decoration: none;
-    transition: all .125s;
-}
-#about  a:hover {
-    background: var(--letter);
-    color: var(--back);
-    text-decoration: underline;
-}
-#about  a:active {
-    border: 2px solid var(--back);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     background: var(--letter);
     color: var(--back);
 }
@@ -225,6 +229,7 @@ footer > a > img {
     width: 5vw;
     height: 5vw;
     margin-inline: 2vw;
+    transition: all .3s ease;
 }
 footer > p {
     font-size: 15px;
