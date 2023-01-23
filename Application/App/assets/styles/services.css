@@ -277,11 +277,11 @@ div.hover {
     background: white;
     margin: 5vw;
     margin-block-end: 1rem;
-    border-radius: 1vw;
+    border-radius: 1rem;
 }
 
 .card::before {
-    border-radius: 1vw;
+    border-radius: 1rem;
     background: linear-gradient(
         130deg,
         transparent 0% 33%,
@@ -618,7 +618,7 @@ footer a:hover {
 }
 @media screen and (max-width: 1020px) {
     footer {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     footer * {
         margin-block: 2vh;
@@ -705,7 +705,6 @@ footer a:hover {
 @media screen and (max-width: 510px){
     #contact > p, #contact > a {
         font-size: 12.5px;
-        /* padding-inline: .75rem; */
     }
 }
 @media screen and (max-width: 500px) {

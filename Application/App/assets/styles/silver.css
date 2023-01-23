@@ -85,7 +85,7 @@ a:hover > i, a:hover > img {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background: white;
     background-image: radial-gradient(var(--back) 3px, transparent 0);
@@ -104,7 +104,7 @@ a:hover > i, a:hover > img {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 75vh;
+    min-height: 80vh;
 }
 #char > .row {
     display: flex;
@@ -125,9 +125,9 @@ a:hover > i, a:hover > img {
 /**extra features**/
 #extra-features {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    height: 75vh;
+    min-height: 75vh;
     width: 100%;
 }
 #extra-features > .back-img {
@@ -135,7 +135,8 @@ a:hover > i, a:hover > img {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100%;
+    top: 0;
+    min-height: 120.5vh;
     width: 100%;
     position: relative;
     z-index: 1;
@@ -164,18 +165,22 @@ a:hover > i, a:hover > img {
     color: var(--letter);
 }
 #left {
-    background-image: url('../img/web-desing.jpg');
+    background-image: url('../img/desing.jpg');
     background-attachment: fixed;
-    background-size: 125%;
-    background-position: -1100px -100px;
-    color: #fff;
+    background-size: 150%;
+    background-position: -400px -200px;
+    /* background-size: cover; */
 }
-#center {
+#extra-features > #center {
     background-image: url('../img/relaxed-man.jpg');
     background-size: 100%;
+    background-size: cover;
+    background-position: -100px;
 }
-#right {
+#extra-features > #right {
     background-image: url('../img/codecode.jpg');
+    background-size: cover;
+    background-position: 500px -150px;
     background-attachment: fixed;
 }
 div.back-img > p, div.back-img > h3 {
@@ -205,18 +210,17 @@ div.back-img > p, div.back-img > h3 {
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 20vh;
+    justify-content: space-evenly;
+    min-height: 20vh;
     margin-inline: 7.5vh;
     background: white;
     background-image: radial-gradient(var(--back) 3px, transparent 0);
     background-size: 40px 40px;
     background-attachment: fixed;
 }
-#contact > button {
+#contact > a {
     padding-block: .5rem;
     padding-inline: 2rem;
-    margin-inline: 5vw;
     border-radius: 2rem;
     font-size: 20px;
     background: var(--back);
@@ -224,24 +228,18 @@ div.back-img > p, div.back-img > h3 {
     color: var(--letter);
     cursor: pointer;
     transition: all .125s;
+    text-decoration: none;
 }
-#contact  button:hover {
+#contact  a:hover {
     background: var(--letter);
     color: var(--back);
+    text-decoration: underline;
 }
-#contact  button:active {
+#contact  a:active {
     border: 2px solid var(--back);
     background: var(--letter);
     color: var(--back);
-
 }
-#contact a {
-    text-decoration: none;
-    color: inherit;
-}
-button:hover > a {
-    text-decoration: underline;
-} 
 #contact > p {
     background: var(--back);
     padding-block: .5rem;
@@ -254,11 +252,11 @@ footer {
     align-items: center;
     justify-content: center;
     padding-block: 10vh;
+    width: 100%;
 }
-footer > a,
 footer > a > img {
-    width: 5vw;
-    height: 5vw;
+    width: 100px;
+    height: 100px;
     margin-inline: 2vw;
     transition: all .3s ease;
 }
@@ -279,4 +277,115 @@ footer a:hover {
 }
 #year {
     margin-inline: 5px;
+}
+@media screen and (max-width: 1030px) {
+    #char > .row {
+        padding-block: 5vh;
+        flex-direction: column;
+    }
+    #char > .row > div {
+        width: 85%;
+        padding-inline: 5vw;
+        margin-block: 5vh;
+    }
+    .vl.big {
+        height: 0;
+        width: 75%;
+        border-bottom: 3px solid white;
+    }
+}
+@media screen and (max-width: 1020px) {
+    footer {
+        flex-direction: column-reverse;
+    }
+    footer * {
+        margin-block: 2vh;
+    }
+}
+@media screen and (max-width: 885px) {
+    #extra-features > .back-img {
+        min-height: 130vh;
+    }   
+}
+@media screen and (max-width: 845px) {
+    #title * {
+        width: 50%;
+    }
+    #left {
+        background-position: -400px -0px;
+    }
+}
+@media screen and (max-width: 775px) {
+    #extra-features {
+        flex-direction: column;
+    }
+    #extra-features > .back-img {
+        min-height: 95vh;
+    }
+    #extra-features > #right {
+        background-position: -100px ;
+    }
+    #extra-features > #center {
+        background-size: 135%;
+        background-position: 0px 0px;
+    }
+    #extra-features > #left {
+        background-size: 250%;
+        background-position: 0px 0px;
+    }
+    footer > p {
+        width: 75%;
+    }
+}
+@media screen and (max-width: 600px) {
+    #title * {
+        width: 75%;
+    }
+    #contact > p, #contact > a {
+        font-size: 15px;
+        padding-inline: 1rem;
+    }
+}
+@media screen and (max-width: 533px) {
+    #extra-features > #left {
+        background-size: 300%;
+        background-position: -50px 0px;
+    }
+}
+@media screen and (max-width: 510px){
+    #contact > p, #contact > a {
+        font-size: 13.5px;
+    }
+}
+@media screen and (max-width: 445px) {  
+    footer p {
+        width: 95%;
+    }
+    #contact {
+        flex-direction: column;
+    }
+    #contact > p, #contact > a {
+        font-size: 15px;
+    }
+    #extra-features > #left {
+        background-size: 400%;
+    }
+    #extra-features > #center {
+        background-size: 150%;
+    }
+}
+@media screen and (max-width: 400px) {
+    #title * {
+        width: 90%;
+    }
+    #extra-features > #center {
+        background-size: 150%;
+        background-position: 0px 0px;
+    }
+}
+@media screen and (max-width: 368px) {
+    #extra-features > #left {
+        background-size: 350%;
+        background-position: -50px 0px;
+    }
 }
