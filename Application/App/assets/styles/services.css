@@ -278,6 +278,7 @@ div.hover {
     margin: 5vw;
     margin-block-end: 1rem;
     border-radius: 1rem;
+    transform: none !important;
 }
 
 .card::before {
