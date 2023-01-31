@@ -35,6 +35,9 @@ a:hover > i, a:hover > img {
     transform: scale(1.05, 1.03);
     cursor: pointer;
 }
+div {
+    position: relative;
+}
 .row {
     display: flex;
     flex-direction: row;
@@ -74,6 +77,7 @@ hr.complete {
     width: 100%;
     padding-block: 25vh;
     margin-inline: 1vw;
+    overflow: hidden;
 }
 #email-form > form {
     width: 65%;
@@ -137,12 +141,55 @@ hr.complete {
     margin-block: 5px;
     font-size: 75%;
 }
+/** little dotted details **/
+.back {
+    position: absolute;
+}
+.yellow-dots {
+    width: 1000px;
+    height: 1000px;
+    background-image: radial-gradient(var(--letter) 3px, transparent 0%);
+    background-size: 40px 40px;
+    transform: rotate(-45deg);
+    border-radius: 35%;
+    right: -650px;
+    top: 50px;
+}
+.white-back {
+    width: 1750px;
+    height: 1000px;
+    background: var(--transparent-white);
+    transform: rotate(-45deg);
+    border-radius: 15rem;
+    right: -1500px;
+    top: 100px;
+}
+.blue-dots {
+    width: 1000px;
+    height: 1000px;
+    background-image: radial-gradient(var(--back) 3px, transparent 0%);
+    background-size: 40px 40px;
+    transform: rotate(45deg);
+    border-radius: 35%;
+    top: 0;
+    left: 0;
+}
+.yellow-back {
+    width: 1000px;
+    height: 1000px;
+    background: var(--letter);
+    transform: rotate(45deg);
+    border-radius: 15rem;
+    left: -700px;
+    top: -400px;
+}
 /*Contact-cards*/
 #contact-cards {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: inherit;
+    position: relative;
     margin: 5rem;
 }
 .inner-contact-cards {
