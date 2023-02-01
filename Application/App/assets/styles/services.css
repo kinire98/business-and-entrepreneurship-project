@@ -152,7 +152,7 @@ a:hover > i, a:hover > img {
     transition: all .3s;
 }
 .you::before {
-    content: '👈 You, while I build your website 👈️';
+    content: var(--text);
 }
 div.hover {
     opacity: 1;
@@ -588,7 +588,7 @@ footer a:hover {
         left: 30px;
     }
     .you::before {
-        content: '👆 ️You, while I build your website 👆';
+        content: var(--mobile);
     }
 }
 @media  screen and (max-width:1200px) {
