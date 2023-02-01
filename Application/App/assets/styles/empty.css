@@ -58,9 +58,6 @@ a:hover > i, a:hover > img {
     transform: scale(1.05, 1.03);
     cursor: pointer;
 }
-.section {
-    margin-block: 10vh;
-}
 .row, .column {
     display: flex;
     align-items: center;
@@ -119,9 +116,12 @@ a:hover > i, a:hover > img {
 }
 /**Midddle**/
 .middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     width: 100vw;
-    height: 50vh;
+    min-height: 50vh;
     background-image: url('../img/Astorga-rescalada.jpg');
     background-attachment: fixed;
     background-size: cover;
@@ -153,25 +153,6 @@ div.middle > p {
 }
 #about > a {
     padding-block: .5rem;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     background: var(--letter);
     color: var(--back);
 }
@@ -180,10 +161,8 @@ div.middle > p {
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 20vh;
-    margin-inline: 7.5vh;
-    margin-block: 0;
+    justify-content: space-evenly;
+    min-height: 20vh;
     background: white;
     background-image: radial-gradient(var(--back) 3px, transparent 0);
     background-size: 40px 40px;
@@ -192,7 +171,6 @@ div.middle > p {
 #contact > a {
     padding-block: .5rem;
     padding-inline: 2rem;
-    margin-inline: 5vw;
     border-radius: 2rem;
     font-size: 20px;
     background: var(--back);
@@ -224,11 +202,11 @@ footer {
     align-items: center;
     justify-content: center;
     padding-block: 10vh;
+    width: 100%;
 }
-footer > a,
 footer > a > img {
-    width: 5vw;
-    height: 5vw;
+    width: 100px;
+    height: 100px;
     margin-inline: 2vw;
     transition: all .3s ease;
 }
@@ -249,4 +227,34 @@ footer a:hover {
 }
 #year {
     margin-inline: 5px;
+}
+@media screen and (max-width: 1020px) {
+    footer {
+        flex-direction: column-reverse;
+    }
+    footer * {
+        margin-block: 2vh;
+    }
+}
+@media screen and (max-width: 775px) { 
+    footer > p {
+        width: 75%;
+    } 
+}
+@media screen and (max-width: 600px) { 
+    #contact > p, #contact > a {
+        font-size: 15px;
+        padding-inline: 1rem;
+    }
+}
+@media screen and (max-width: 500px) {  
+    #contact {
+        flex-direction: column;
+    }
+    #contact > p, #contact > a {
+        font-size: 15px;
+    }
+    footer p {
+        width: 95%;
+    }
 }
