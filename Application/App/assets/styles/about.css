@@ -195,15 +195,12 @@ a:hover > i, a:hover > img {
     min-height: 65vh;
 }
 
-#skills > h2::before {
-    margin-block: 5vh;
-    content: "My skills 🔧 🔨";
-    transition: content .3s;
-}
+
 /* #skills > h2:hover::before {
     content: "Hover your mouse over the titles ;)";
 } */
 #skills > .row  {
+    align-items: flex-start;
     width: 100%;
 }
 #skills > .row > div {
@@ -216,7 +213,7 @@ a:hover > i, a:hover > img {
     background: transparent;
     position: relative;
     padding-block: .5rem;
-    margin-block: 1.5rem;
+    margin-block: .5rem;
     border-radius: 2rem;
     font-size: 2rem;
     cursor: pointer;
@@ -258,7 +255,7 @@ a:hover > i, a:hover > img {
     animation: var(--animation) .3s forwards ease-in;
 }
 .before::before {
-    content: 'Hover your mouse over the button';
+    content: var(--text);
 }
 @keyframes left {
     0% {
@@ -664,7 +661,7 @@ footer a:hover {
         background-position: 0px 0px;
     }      
 }
-@media screen and (max-width: 1070px) {
+@media screen and (max-width: 1300px) {
     body {
         font-size: 20px;
     }
@@ -674,6 +671,7 @@ footer a:hover {
     }
     #skills > .row {
         flex-direction: column;
+        align-items: center;
         width: 100%;
     }
     #skills > .row > div {
@@ -715,7 +713,7 @@ footer a:hover {
         border: 3px solid var(--back);
     }
     .before::before {
-        content: 'Keep pressing the button';
+        content: var(--mobile);
     }
     #movement:active > i {
         animation: move-truck 2s ease-in-out;
