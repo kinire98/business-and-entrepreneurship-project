@@ -64,7 +64,7 @@ a {
     text-decoration: none;
 }
 a:hover > i, a:hover > img {
-    transform: scale(1.05, 1.03);
+    transform: scale(1.08, 1.08);
     cursor: pointer;
 }
 abbr {
