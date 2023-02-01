@@ -271,6 +271,9 @@ span#arrows i {color: var(--back);}
         width: 250px;
         bottom: 275px;
     }
+    #third {
+        font-size: 50%;
+    }
 }
 @media screen and (max-width: 430px) {
     img#logo {
