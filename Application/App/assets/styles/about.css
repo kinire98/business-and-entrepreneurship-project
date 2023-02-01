@@ -17,6 +17,7 @@
 }
 html {
     scrollbar-color: var(--letter) var(--back);
+    overflow-x: hidden;
 }
 ::-webkit-scrollbar {
     width: 15px;
@@ -97,11 +98,9 @@ a:hover > i, a:hover > img {
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background: var(--transparent-white);
-    /* background-image: radial-gradient(var(--back) 3px, transparent 0); */
-    /* background-size: 40px 40px; */
     background-image: url('../img/myDesktopGrayScale.jpg');
     background-size: cover;
     background-attachment: fixed;
@@ -135,7 +134,7 @@ a:hover > i, a:hover > img {
     right: -15%;
     border-radius: 14em;
 }
-/*who am I div*/
+/** who am I div **/
 
 #who-am-I {
     display: flex;
@@ -143,7 +142,7 @@ a:hover > i, a:hover > img {
     justify-content: center;
     position: relative;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     padding-block: 5vh;
     background: var(--letter);
@@ -152,7 +151,7 @@ a:hover > i, a:hover > img {
     background-image: url('../img/me-at-the-beach-2.jpg');
     background-size: cover;
     background-attachment: fixed;
-    background-position: 0px -250px;
+    background-position: 0 -250px;
 }
 #who-am-I * {
     color: var(--back);
@@ -193,6 +192,7 @@ a:hover > i, a:hover > img {
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    min-height: 65vh;
 }
 
 #skills > h2::before {
@@ -257,7 +257,9 @@ a:hover > i, a:hover > img {
     height: 7.5px;
     animation: var(--animation) .3s forwards ease-in;
 }
-
+.before::before {
+    content: 'Hover your mouse over the button';
+}
 @keyframes left {
     0% {
         width: 0px;
@@ -403,7 +405,7 @@ a:hover > i, a:hover > img {
     25% {
         width: 0%;
     }
-    68% {
+    80% {
         width: 0%;
     }
     100% {
@@ -429,17 +431,17 @@ a:hover > i, a:hover > img {
         visibility: visible
     }
     50% {
-        left: 110%;
+        left: 135%;
         opacity: 0;
         visibility: hidden;
     }
     51% {
-        left: -25%;
+        left: -100%;
         opacity: 0;
         visibility: hidden;
     }
     60% {
-        left: -25%;
+        left: -100%;
         opacity: 1;
         visibility: visible
     }
@@ -485,117 +487,6 @@ a:hover > i, a:hover > img {
     left: var(--left);
     transition: all .3s;
 }
-
-/* /**
-** Hover cards
-** (https://youtu.be/htGfnF1zN4g)
-*/
-/* #contact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    text-align: center;
-    margin-block: 0;
-    padding-block: 5Vh;
-    background: var(--transparent-white);
-    /* background-image: radial-gradient(var(--back) 3px, transparent 0px);
-    background-image: url('../img/contact.jpg');
-    /* background-size: 40px 40px; 
-    background-attachment: fixed;
-    background-size: cover;
-}
-#contact > h2 {
-    padding: 15px;
-    background-color: var(--back);
-    border-radius: 2rem;
-}
-#cards {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    max-width: 75%;
-    width: calc(100% - 20px)
-}
-.card {
-    position: relative;
-    background-color: rgba(255,255,255,.02);
-    border-radius: 10px;
-    cursor: pointer;
-    height: 150px;
-    width: 450px;
-}
-
-.card::before,
-.card > .card-border  {
-    border-radius: inherit;
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0px;
-    top: 0px;
-    opacity: 0;
-    transition: opacity .5s;
-}
-.card::before {
-    background: radial-gradient(
-        600px circle at var(--mouse-x) var(--mouse-y),
-        var(--color),
-        transparent 40%
-    );
-    z-index: 3;
-}
-
-.card > .card-border {
-    background: radial-gradient(
-        300px circle at var(--mouse-x) var(--mouse-y),
-        var(--color),
-        transparent 40%
-    );
-    z-index: 1;
-}
-
-#cards:hover > .card > .card-border {
-    opacity: 1;
-}
-
-.card:hover::before {
-    opacity: 1;
-}
-
-.card > .card-content {
-    position: relative;
-    height: calc(100% - 3px);
-    width: calc(100% - 3px);
-    background-color: var(--card-color);
-    border-radius: inherit;
-    margin: 1px;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-.card-content > span {
-    z-index: 4;
-    opacity: 0;
-    transition: .5s opacity;
-    font-size: 35px;
-    position: relative;
-}
-.card:hover > .card-content > span {
-    opacity: 1;
-}
-.card-content > * {
-    margin-inline: 5%;
-}
-.card-content > i {
-    font-size: 50px;
-    position: relative;
-}*/
 /**Compromise**/
 #compromise {
     display: flex;
@@ -606,10 +497,12 @@ a:hover > i, a:hover > img {
     position: relative;
     padding: 5rem;
     margin-block: 0;
-    text-align: justify;
     background-image: url('../img/pueblos-de-leon.jpg');
     background-attachment: fixed;
     background-size: cover;
+}
+#compromise > h2 {
+    margin-inline: 2rem;
 }
 
 #compromise > * {
@@ -651,7 +544,6 @@ a:hover > i, a:hover > img {
     z-index: 1;
     width: 100%;
     margin-block: 0;
-    padding-block-end: 5vh;
 }
 .margin {
     margin-left: 50px;
@@ -692,121 +584,15 @@ a:hover > i, a:hover > img {
     border-radius: 36%;
     z-index: 0;
 }
-
-
-/**code-cards*/
-/* .card-hover {
-    aspect-ratio: 1/1.2;
-    border: 0.5vmin solid var(--border);
-    cursor: pointer;
-    position: relative;
-    width: 23vw;
-    background: black;
-    margin: 5vw;
-    margin-block-end: 12vw;
-    border-radius: 1vw;
-}
-
-.card-hover::before {
-    border-radius: 1vw;
-    background: linear-gradient(
-        130deg,
-        transparent 0% 33%,
-        var(--g1) 66%,
-        var(--g2) 83.5%,
-        var(--g3) 100%
-    );
-    background-position: 0% 0%;
-    background-size: 300% 300%;
-    content: "";
-    height: 100%;
-    left:0px;
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    transition: all 350ms ease;
-}
-
-.card-hover:hover::before {
-    background-position: 100% 100%;
-    transform: scale(1.08, 1.03);
-}
-
-.card-content-hover {
-    background: radial-gradient(
-        rgba(255, 255, 255, 0.2) 3px,
-        transparent 0px
-    );
-    background-position: 0% 0%;
-    background-size: 40px 40px;
-    height: calc(100% - 10vmin);
-    width: calc(100% - 10vmin);
-    padding: 5vmin;
-    transition: background-position 350ms ease;
-    z-index: 2;
-    position: relative;
-    background-attachment: fixed;
-}
-.card-hover:hover > a > .card-content-hover {
-    background-position: -10% 0%;
-    
-}
-.card-title,
-.card-subtitle {
-    font-weight: 400;
-    margin: 0px;
- }
-
-.card-title {
-    font-size: 3.5vw;
-}
-.card-subtitle {
-    font-size: 1.5vw;
-    margin-top: 1vw;
-}
-.card-subtitle-word {
-    display: inline-block;
-    margin: 0vmin 0.3vmin;
-    position: relative;
-    transform: translateY(40%);
-    transition: none;
-    opacity: 0;
-}
-.card-hover:hover > a > .card-content-hover > .card-subtitle > .card-subtitle-word {
-    opacity: 1;
-    transform: translateY(0%);
-    transition: opacity 0ms, transform 200ms cubic-bezier(.9, .06, .15, .9);
-}
-.card-icon {
-    bottom: 0px;
-    color: var(--border);
-    font-size: 7vmin;
-    left: 0px;
-    margin: 5vmin;
-    position: absolute;
-    transition: color 250ms ease;
-    z-index: 2;position: absolute;
-    width: 5rem;
-}
-.card-hover:hover >  .card-icon {
-    color: white;
-}
-#page-code {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 75%;
-} */
 /**Contact**/
 #contact {
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: row;
-    height: 25vh;
+    min-height: 20vh;
     margin-inline: 7.5vh;
-    margin-block: 0;
     background: var(--transparent-white);
     background-image: radial-gradient(var(--back) 3px, transparent 0);
     background-size: 40px 40px;
@@ -815,7 +601,6 @@ a:hover > i, a:hover > img {
 #contact > a {
     padding-block: .5rem;
     padding-inline: 2rem;
-    margin-inline: 5vw;
     border-radius: 2rem;
     font-size: 20px;
     background: var(--back);
@@ -823,39 +608,36 @@ a:hover > i, a:hover > img {
     color: var(--letter);
     cursor: pointer;
     transition: all .125s;
+    text-decoration: none;
 }
-#contact  a:hover {
+#contact > a:hover {
     background: var(--letter);
     color: var(--back);
     text-decoration: underline;
 }
-#contact  a:active {
+#contact > a:active {
     border: 2px solid var(--back);
     background: var(--letter);
     color: var(--back);
 }
-#contact a {
-    text-decoration: none;
-    color: inherit;
-} 
-#contact  h5 {
+ 
+#contact > h5 {
     background: var(--back);
     padding-block: .5rem;
     padding-inline: 2rem;
     border-radius: 2rem;
 }
-
 /**Footer**/
 footer {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-block: 10vh;
+    width: 100%;
 }
-footer > a,
 footer > a > img {
-    width: 5vw;
-    height: 5vw;
+    width: 100px;
+    height: 100px;
     margin-inline: 2vw;
     transition: all .3s ease;
 }
@@ -877,4 +659,128 @@ footer a:hover {
 
 #year {
     margin-inline: 5px;
+}
+@media screen and (max-width:1350px) {
+    #who-am-I {
+        background-position: 0px 0px;
+    }      
+}
+@media screen and (max-width: 1070px) {
+    body {
+        font-size: 20px;
+    }
+    #skills {
+        width: 100%;
+        font-size: 25px;
+    }
+    #skills > .row {
+        flex-direction: column;
+        width: 100%;
+    }
+    #skills > .row > div {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #movement {
+        width: 100%;
+    }
+    #skills > .row > div p {
+        text-align: center;
+        width: 100%;
+    } 
+    .fancy-button {
+        padding-block: .5rem;
+        margin-block: .5rem;
+        border-radius: 2rem;
+        font-size: 1.5rem;
+    }
+    .fancy-button h3 {
+        margin-inline: 2.5rem;
+    }
+    .fancy-button:active > #lines > * > .lines {
+        width: 35px;
+        display: block;
+        position: absolute; 
+        background: var(--letter);
+        border-radius: 2.5px;
+        transform: rotate(var(--angle));
+        height: 7.5px;
+        animation: var(--animation) .3s forwards ease-in;
+    }
+    .fancy-button:active {
+        background: var(--letter);
+        color: var(--back);
+        border: 3px solid var(--back);
+    }
+    .before::before {
+        content: 'Keep pressing the button';
+    }
+    #movement:active > i {
+        animation: move-truck 2s ease-in-out;
+    }
+    #movement:active > h3 {
+        animation: text-hide 2s ease-in-out;
+    }
+    #lightbulb:active .fa-duotone.fa-lightbulb.lightbulb {
+        color: var(--letter);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+    }
+    #lightbulb:active .fa-duotone.fa-lightbulb.lightbulb > .lines {
+        width: 15px;
+        height: 7.5px;
+        border-radius: 5px;
+        background: var(--letter);
+        position: absolute;
+        transform: rotate(var(--rotation));
+        top: var(--top);
+        left: var(--left);
+        transition: all .3s;
+    }
+}
+@media screen and (max-width: 1020px) {
+    footer {
+        flex-direction: column-reverse;
+    }
+    footer * {
+        margin-block: 2vh;
+    }
+}
+@media screen and (max-width: 775px) { 
+    footer > p {
+        width: 75%;
+    } 
+}
+@media screen and (max-width: 600px) { 
+    #contact > p, #contact > a {
+        font-size: 15px;
+        padding-inline: 1rem;
+    }
+}
+@media screen and (max-width: 510px){
+    #contact > p, #contact > a {
+        font-size: 12.5px;
+    }
+    #who-am-I {
+        background-position: -100px 0px;
+    }
+}
+@media screen and (max-width: 445px) {  
+    #skills > .row > div {
+        width: 80%;
+    }
+    #contact {
+        flex-direction: column;
+    }
+    #contact > p, #contact > a {
+        font-size: 15px;
+    }
+    footer p {
+        width: 95%;
+    }
 }

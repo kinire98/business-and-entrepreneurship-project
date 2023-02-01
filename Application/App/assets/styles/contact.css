@@ -14,7 +14,26 @@
     font-family: 'Poppins', sans-serif;
     color: #fff;
 }
+html {
+    scrollbar-color: var(--letter) var(--back);
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: var(--back);
+}
 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--letter);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--letter-dif);
+}
 body {
     background: #302455;
     display: flex;
