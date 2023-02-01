@@ -80,6 +80,15 @@ abbr {
     height: 85%;
     border-left: 3px solid white;
 }
+.black {
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
 /**Title**/
 #title {
     display: flex;
@@ -202,6 +211,48 @@ abbr {
     right: 0;
     background: var(--letter-dif);   
     margin-block: 0vh;
+}
+/**About me**/
+#me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    min-height: 25vh;
+    z-index: 0;
+    background-image: url('../img/myDesktop.jpg');
+    background-attachment: fixed;
+    padding: 5vh;
+}
+#me > #column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 25vh;
+    z-index: 1;
+}
+#me a {
+    margin-block: 2vh;
+    background: var(--back);
+    padding-block: .5rem;
+    padding-inline: 2rem;
+    border-radius: 2rem;
+    color: var(--letter);
+    border: 2px solid var(--letter);
+    transition: all .3s;
+    cursor: pointer;
+    font-size: 20px;
+}
+#me a:hover {
+    background: var(--letter);
+    color: var(--back);
+    text-decoration: underline;
+}
+#me a:active {
+    border: 2px solid var(--back);
 }
 /**Contact**/
 #contact {
