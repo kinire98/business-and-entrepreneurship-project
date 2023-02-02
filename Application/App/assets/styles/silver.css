@@ -332,7 +332,7 @@ footer a:hover {
 #year {
     margin-inline: 5px;
 }
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1300px) {
     #char > .row {
         padding-block: 5vh;
         flex-direction: column;
