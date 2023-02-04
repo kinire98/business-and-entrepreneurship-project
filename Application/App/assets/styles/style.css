@@ -27,3 +27,23 @@
 html {
     scrollbar-color: var(--letter) var(--back);
 } 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: .3s;
+    z-index: 0;
+}
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: #333;
+}
+main {
+    position: absolute;
+    width: 90vw;
+    min-height: 100vh;
+    right: 0;
+}

@@ -12,10 +12,10 @@
     padding: 0;
     box-sizing: inherit;
     font-family: 'Poppins', sans-serif;
-    color: #fff;
 }
 html {overflow: hidden; margin: 0; padding: 0;}
 body {
+    color: #fff;
     margin: 0;
     padding: 0;
     background: var(--back);
@@ -200,13 +200,13 @@ span#arrows i {color: var(--back);}
     #bottom-left {
         display: flex;
         justify-content: center;
-        left: 15vw;
-        right: 15vw;
+        left: 7.5vw;
+        right: 22.5vw;
     }
     
 }
 @media screen and (max-height: 800px) {
-    span {
+    .span {
         font-size: 75% !important;
     }
     img#logo {
@@ -236,7 +236,7 @@ span#arrows i {color: var(--back);}
         bottom: 400px;
         width: 400px;
     }
-    span {
+    .span {
         font-size: 50% !important;
     }
     #third {
@@ -249,7 +249,7 @@ span#arrows i {color: var(--back);}
         width: 300px;
         bottom: 200px;
     } 
-    span {
+    .span {
         font-size: 50% !important;
     }
     span#arrows {

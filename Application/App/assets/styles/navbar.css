@@ -1,24 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-:root {
-    --letter: #FFCA5F;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    transition: .3s;
-}
-body {
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-    background: #333;
-}
 aside {
-    position: absolute;
+    left: 0;
+    position: fixed;
     height: 100vh;
-    width: 100px;
+    width: 85px;
     display: flex;
     align-items: center;
     justify-self: flex-start;
@@ -26,8 +10,10 @@ aside {
     --bronze: #804a00;
     --silver: #b2b2b2;
     --gold: #bf9b30;
-
-
+    z-index: 99999;
+}
+main {
+    width: calc(100vw - 100px);
 }
 .navigation {
     position: relative;
@@ -59,15 +45,16 @@ aside {
     align-items: center;
     width: 100%;
     text-align: center;
-    color: #000;
+    color: #000 !important;
     font-weight: 500;
 }
 .navigation > ul > li > a > .icon {
-    position: relative;
     display: block;
+    position: relative;
     line-height: 75px;
     text-align: center;
     transition: .3s;
+    bottom: 45px;
 }
 .navigation > ul > li.active > a > .icon {
     color: #fff;
@@ -75,10 +62,11 @@ aside {
 .navigation > ul > li > a > .icon > i {
     font-size: 24px;
 }
-.navigation > ul > li > a > .title {
+.navigation > ul > li > a > .title { 
     position: absolute;
     top: 50%;
     left: 150%;
+    width: 150%;
     background: #fff;
     transform: translateY(-50%);
     padding: 5px 10px;
@@ -87,6 +75,7 @@ aside {
     opacity: 0;
     box-shadow: rgba(0,0,0,.1);
     visibility: hidden;
+    font-size: 18px !important;
 }
 #options {
     position: relative;
@@ -99,6 +88,7 @@ aside {
     opacity: 1;
     visibility: visible;
     transform: translateX(-30px) translateY(-50%);
+    z-index: 999 !important;
 }
 .navigation > ul > li > a > .title::before {
     content: '';
@@ -192,21 +182,25 @@ button.hamburger {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    width: 75px;
-    height: 75px;
-    right: calc(25px + 1pc);
-    bottom: calc(25px + 1pc);
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 15px;
+    bottom: 65px;
     border-radius: 50%;
     padding: 10px;
     background: var(--letter);
     opacity: 0;
     visibility: hidden;
+    animation: opacityham 1s 5.5s forwards linear;
 }
-
+@keyframes opacityham {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 @media screen and (max-width:850px) {
     button.hamburger {
-        opacity: 1;
+        opacity: 0;
         visibility: visible;
         z-index: 999;
     }
@@ -231,6 +225,9 @@ button.hamburger {
     }
 }
 @media screen and (max-height: 575px) {
+    aside {
+        top: 0;
+    }
     .navigation {
         height: 400px;
     }
@@ -251,8 +248,8 @@ button.hamburger {
     .navigation > ul > .indicator::before {
         content: '';
         position: absolute;
-        top: 50%;
-        left: 50%;
+        top: 57%;
+        left: 51.55%;
         width: 40px;
         height: 40px;
         background: #333;
@@ -320,6 +317,7 @@ button.hamburger {
     }
     .navigation > ul > li > a > .icon {
         line-height: 46.875px;
+        bottom: 50px;
     }
     .navigation > ul > li > a > .icon > i {
         font-size: 19px;
