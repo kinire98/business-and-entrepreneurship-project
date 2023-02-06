@@ -4,6 +4,7 @@
     --back: #302455;
     --transparent-white: rgba(255,255,255, .5);
     --letter-dif: #FFCA5F66;
+
 }
 * {
     margin: 0;
@@ -26,6 +27,13 @@ body {
     font-size: 25px;
     overflow-x: hidden;
     
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline: 1vw;
 }
 i {
     color: var(--letter);
@@ -185,8 +193,7 @@ div.hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-block: 5vh;
-    width: 100%;
+    width: 100vw;
     min-height: 65vh;
 
 }
