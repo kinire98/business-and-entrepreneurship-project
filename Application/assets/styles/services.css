@@ -398,6 +398,7 @@ div.hover {
 #compare >.row {
     margin-block-start: 2vh;
     flex-direction: row;
+    align-items: flex-start;
 }
 .compare {
     margin-inline: 5vw;

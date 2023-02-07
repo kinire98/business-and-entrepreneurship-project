@@ -23,16 +23,3 @@
 #contact > button.reveal.button {
     transition: all 1s ease;
 }
-header.reveal {
-    transform: translateY(0px);
-    opacity: 0;
-    visibility: hidden;
-    height: 0vh;
-    transition: transform .3s, opacity .3s, height .75s ease;
-}
-header.reveal.active {
-    position: fixed;
-    visibility: visible;
-    opacity: 1;
-    height: 10vh;
-}
