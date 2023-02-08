@@ -14,7 +14,7 @@ header {
     transition: height .32s ease-in-out;
 }
 header.is-active {
-    min-height: 10vh;
+    height: 10vh;
 }
 header i {
     color: white;
@@ -113,10 +113,7 @@ header > nav > div > a > img {
 @media screen and (max-width:1300px) {
     header > nav > ul > li > a {
         justify-content: space-between;
-    }
-    header > nav > ul > li > a {
-        justify-content: center;
-    }
+    } 
 }
 @media screen and (max-width: 1250px) {
     header.is-active {
