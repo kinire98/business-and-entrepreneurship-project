@@ -115,6 +115,7 @@ abbr {
     justify-content: center;
     flex-direction: column;
     min-height: 80vh;
+    padding-block: 5vh;
 }
 #char > .row {
     display: flex;
