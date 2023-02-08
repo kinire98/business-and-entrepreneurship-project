@@ -15,7 +15,12 @@ header {
 header.is-active {
     height: 10vh;
 }
+header a {
+    text-decoration: none !important;
+}
 header i {
+    height: 2.5rem;
+    font-size: 2.5rem;
     color: white;
 }
 header > nav {

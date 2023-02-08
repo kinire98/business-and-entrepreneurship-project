@@ -1,4 +1,4 @@
-import { ajaxHelper } from "../../../helpers/ajaxHelper.js";
+import { ajaxHelper } from "./ajaxHelper.js";
 
 export function email(eMail) {
 

@@ -5,11 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacta conmigo!</title>
-    <link rel="stylesheet" href="../../../../App/assets/styles/contact.css">
-    <link rel="stylesheet" href="../../fontawesome/css/pro.min.css">
-    <link rel="stylesheet" href="../../styles/reveal.css">
+    <link rel="stylesheet" href="../../assets/styles/contact.css">
+    <link rel="stylesheet" href="../../assets/fontawesome/css/pro.min.css">
+    <link rel="stylesheet" href="../../assets/styles/reveal.css">
+    <link rel="stylesheet" href="../../assets/styles/header.css">
+    <link rel="stylesheet" href="../../assets/styles/hamburgers.min.css">
+    <link rel="shortcut icon" href="../../assets/img/mainLogo.png">
 </head>
 <body>
+    <header style="--back:#302455f0;">
+        <nav>
+            <div>
+                <a href="../"><img src="../../assets/img/mainLogo.png" alt=""></a>
+                <button class="hamburger hamburger--squeeze" type="button">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </button>
+            </div>
+            <ul>
+                <li><a href="../servicios/"><i class="fa-duotone fa-code" aria-hidden="true"></i> <span>Servicios</span></a></li>
+                <li><a href="../bronce/"><i class="fa-duotone fa-coin" aria-hidden="true"></i> <span>Web bronce</span></a></li>
+                <li><a href="../plata/"><i class="fa-duotone fa-coins" aria-hidden="true"></i> <span>Web plata</span></a></li>
+                <li><a href="../oro/"><i class="fa-duotone fa-medal" aria-hidden="true"></i> <span>Web oro</span></a></li>
+                <li class="is-active"><a><i class="fa-duotone fa-address-card" aria-hidden="true"></i> <span>Contacto</span></a></li>
+                <li><a href="../sobre/"><i class="fa-duotone fa-phone" aria-hidden="true"></i> <span>Sobre mí</span></a></li>
+                <li><a href="../compromiso/"><i class="fa-duotone fa-mountain-sun" aria-hidden="true"></i> <span>Mi compromiso</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div id="title">
         <h1 class="reveal">¿Interesado?</h1> <br>
         <h2 class="reveal">👇 Descubre cómo contactar conmigo o ver alguno de mis proyectos 👇</h2>
@@ -147,7 +172,7 @@
             <h2>¿Quién soy?</h2>
             <p>
                 Un amante del desarrollo, que quiere que pequeñas empresas y emprendedores puedan llevar a cabo sus ideas. <br>
-                Descubirás, aparte de los bajos precios, profeisonalidad, trabajo duro y un tratamiento cercano. <br>
+                Descubirás, aparte de los bajos precios, profesionalidad, trabajo duro y un tratamiento cercano. <br>
                 No te preocupes, lo tengo todo controlado.
             </p>
             <a href="#/About">Descubre algo más -></a>
@@ -156,7 +181,7 @@
     <hr class="complete">
     <footer>
         <p>© <span id="year"> </span> Iker Nieto Garrido. All Rights reserved</p>
-        <a href="#/"><img src="../../img/mainLogo.png" alt="Main logo"></a>
+        <a href="#/"><img src="../../assets/img/mainLogo.png" alt="Main logo"></a>
         <p>
             <a href="#/Legal">Aviso legal</a>
             <span class="vl"></span>
@@ -165,6 +190,6 @@
             <a href="#/Privacy">Política de privacidad</a>
         </p>
     </footer>
-    <script src="../../scripts/contact.js" type="module"></script>
+    <script src="../../assets/scripts/contact.js" type="module"></script>
 </body>
 </html>
