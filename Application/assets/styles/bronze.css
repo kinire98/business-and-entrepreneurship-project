@@ -65,7 +65,7 @@ abbr {
     cursor: pointer;
 }
 a:hover > i, a:hover > img {
-    transform: scale(1.08, 1.00);
+    transform: scale(1.08, 1.08);
     cursor: pointer;
 }
 .vl {
