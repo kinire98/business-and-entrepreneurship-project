@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     openCardLinks(".card");
     openCardLinks(".card-title");
     openCardLinks(".card-subtitle");
+    openCardLinks(".card-subtitle *")
     openCardLinks(".card-icon");
     formSupport();
     appear();

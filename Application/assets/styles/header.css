@@ -70,7 +70,7 @@ header > nav > ul > li > a > span {
 header > nav > ul > li:nth-child(8) > a > span {
     font-size: 15px;
 }
-header > nav > ul > li:hover > a > span {
+header.is-active > nav > ul > li:hover > a > span {
     transform: translateY(0px);
     opacity: 1;
     visibility: visible;

@@ -44,8 +44,12 @@ body {
     font-size: 25px;
     overflow-x: hidden;
 }
-h2 {
+h1, h2 {
     text-align: center;
+    z-index: 2;
+    background: var(--back);
+    padding: 1rem;
+    border-radius: 1rem;
 }
 hr {
     width: 75%;
@@ -84,6 +88,7 @@ div {
     background-attachment: fixed;
     margin-block-end: 0;
     position: relative;
+    z-index: 2;
 }
 hr.complete {
     width: 100%;
@@ -97,6 +102,7 @@ hr.complete {
     padding-block: 25vh;
     margin-inline: 1vw;
     overflow: hidden;
+    z-index: 1;
 }
 #email-form > form {
     width: 65%;
@@ -110,6 +116,7 @@ hr.complete {
     border-radius: 1rem;
     padding: .5rem;
     border: 1px solid var(--letter);
+    background: var(--back);
 }
 #email-form > form > fieldset > legend {
     padding: .5rem;
@@ -162,7 +169,8 @@ hr.complete {
 }
 /** little dotted details **/
 .back {
-    position: absolute;
+    position: fixed;
+    z-index: 0;
 }
 .yellow-dots {
     width: 1000px;
@@ -203,6 +211,7 @@ hr.complete {
     top: -400px;
 }
 /*Contact-cards*/
+
 #contact-cards {
     display: flex;
     align-items: center;
@@ -210,12 +219,14 @@ hr.complete {
     flex-direction: inherit;
     position: relative;
     margin: 5rem;
+    z-index: 2;
 }
 .inner-contact-cards {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    z-index: 2;
 }
 .card {
     aspect-ratio: 1/0.8;
@@ -229,6 +240,7 @@ hr.complete {
     border-radius: 1rem;
     margin-inline: 1vw;
     transform: none !important;
+    z-index: 2;
 }
 
 .card::before {
@@ -265,7 +277,7 @@ hr.complete {
     width: calc(100% - 5rem);
     padding: 2.5rem;
     transition: background-position 350ms ease;
-    z-index: 2;
+    z-index: 3;
     position: relative;
 }
 .card:hover > .card-content {
@@ -306,7 +318,7 @@ hr.complete {
     margin: 2.5rem;
     position: absolute !important;
     transition: color 250ms ease;
-    z-index: 2;
+    z-index: 3;
     width: 5rem;
 }
 .card:hover > .card-icon {
@@ -321,6 +333,7 @@ hr.complete {
     width: 100%;
     min-height: 85vh;
     padding-block: 15vh;
+    z-index: 2;
 }
 #page-code > .row {
     flex-direction: row;
@@ -334,7 +347,7 @@ hr.complete {
     position: relative;
     width: 100%;
     min-height: 25vh;
-    z-index: 0;
+    z-index: 2;
     background-image: url('../img/myDesktop.jpg');
     background-attachment: fixed;
     padding: 5vh;
@@ -346,7 +359,7 @@ hr.complete {
     flex-direction: column;
     text-align: center;
     min-height: 25vh;
-    z-index: 1;
+    z-index: 2;
 }
 #me a {
     margin-block: 2vh;
@@ -375,6 +388,8 @@ footer {
     justify-content: center;
     padding-block: 10vh;
     width: 100%;
+    background: var(--back);
+    z-index: 2;
 }
 footer > a,
 footer > a > img {
