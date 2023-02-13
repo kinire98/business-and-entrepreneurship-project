@@ -1,8 +1,10 @@
 :root {
     --letter: #FFCA5F;
-    --back: #201435;
+    --back: #302455;
     --transparent-white: rgba(255,255,255, .35);
-    --letter-dif: #FFCA5F66;
+    --card-color: rgb(23,23,23);
+    --letter-dif: #FFCA5Faa;
+    --black: rgba(0,0,0,.5);
 }
 /* width */
 ::-webkit-scrollbar {
@@ -26,4 +28,7 @@
 }
 html {
     scrollbar-color: var(--letter) var(--back);
-} 
+}
+body {
+    background: var(--back);
+}
