@@ -667,6 +667,8 @@ footer a:hover {
     }
     #compare > .row {
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     #compare > .row > * {
         width: 75%;

@@ -29,7 +29,9 @@ body {
     overflow: hidden;
     position: relative;
 }
-
+a {
+    z-index: 9999999;
+}
 #centered {
     position: relative;
     right: -10vw;
@@ -221,6 +223,9 @@ span#arrows i {color: var(--back);}
     }
     #bottom-left {
         bottom: 10vh;
+    }
+    #centered {
+        left: 1vw;
     }
 }
 @media screen and (max-width:775px) {

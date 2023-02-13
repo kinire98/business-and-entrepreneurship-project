@@ -123,7 +123,7 @@ header > nav > div > a > img {
 }
 @media screen and (max-width: 1250px) {
     header.is-active {
-        height: 20vh;
+        height: 11vh;
     }
     header > nav {
         flex-direction: column;
@@ -149,16 +149,17 @@ header > nav > div > a > img {
         overflow: hidden;
     }
     header > nav {
-        justify-content: flex-start;
         overflow: hidden;
     }
     header > nav > div {
         top: 0;
-        margin-top: 3.5vh;
         position: fixed;
+        margin-block: .5vh;
         display: flex;
         width: calc(100% - 10vw);
         justify-content: space-between;
+        align-items: center;
+        height: 10vh;
     }
     header.is-active .hamburger {
         display: inline-block !important;

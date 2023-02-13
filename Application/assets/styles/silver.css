@@ -15,7 +15,10 @@
 }
 html {
     scrollbar-color: var(--letter) var(--back);
+    overflow-x: hidden;
+    min-height: 100%;
 }
+
 ::-webkit-scrollbar {
     width: 15px;
 }
@@ -34,15 +37,15 @@ html {
 }
 body {
     background: var(--back);
-    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100%;
     font-size: 25px;
     overflow-x: hidden;
     color: var(--letter);
+    background-size: cover;
 }
 i {
     color: var(--letter);
@@ -115,6 +118,8 @@ a:hover > i, a:hover > img {
     flex-direction: column;
     min-height: 80vh;
     padding-block: 5vh;
+    background: var(--back);
+    background-size: cover;
 }
 #char > .row {
     display: flex;
@@ -226,6 +231,7 @@ div.back-img > p, div.back-img > h3 {
     z-index: 0;
     background-image: url('../img/myDesktop.jpg');
     background-attachment: fixed;
+    background-size: cover;
     padding: 5vh;
 }
 #me > #column {
@@ -308,6 +314,8 @@ footer {
     justify-content: center;
     padding-block: 10vh;
     width: 100%;
+    background: var(--back);
+    background-size: cover;
 }
 footer > a > img {
     width: 100px;
@@ -333,7 +341,7 @@ footer a:hover {
 #year {
     margin-inline: 5px;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1030px) {
     #char > .row {
         padding-block: 5vh;
         flex-direction: column;
@@ -386,7 +394,7 @@ footer a:hover {
     }
     #extra-features > #left {
         background-size: 250%;
-        background-position: 0px 0px;
+        background-position: 0px 350px;
     }
     footer > p {
         width: 75%;
@@ -423,7 +431,7 @@ footer a:hover {
         font-size: 15px;
     }
     #extra-features > #left {
-        background-size: 400%;
+        background-size: 350%;
     }
     #extra-features > #center {
         background-size: 150%;

@@ -15,6 +15,7 @@
 }
 html {
     scrollbar-color: var(--letter) var(--back);
+    overflow-x: hidden;
 }
 ::-webkit-scrollbar {
     width: 15px;
@@ -34,7 +35,6 @@ html {
 }
 body {
     background: var(--back);
-    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;

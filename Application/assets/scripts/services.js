@@ -1,15 +1,16 @@
 import { appear, hamburger } from "./header.js";
 import { addRemoveClassOnHover } from "./modules/addRemoveClassOnHover.js";
 import { getYear } from "./modules/getYear.js";
-import { reveals } from "./modules/reveals.js";
-
+import { revealEverything, reveals } from "./modules/reveals.js"
+let regexp = /android|iphone|kindle|ipad|webOS|iPhone|iPod|BlackBerry|WindowsPhone/i,
+     isMobileDevice = regexp.test(navigator.userAgent);
 
 
 document.addEventListener("DOMContentLoaded", () => {
     getYear();
     addRemoveClassOnHover(".you", 'img[alt="A relaxed man"]', "hover", "hover");
-    reveals();
+    if (!isMobileDevice) {reveals();} else {revealEverything();}
     appear();
     hamburger();
-})
-window.addEventListener("scroll", reveals)
+});
+if(!isMobileDevice) window.addEventListener("scroll", reveals)

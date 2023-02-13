@@ -17,6 +17,7 @@
 }
 html {
     scrollbar-color: var(--letter) var(--back);
+    overflow-x: hidden;
 }
 ::-webkit-scrollbar {
     width: 15px;
