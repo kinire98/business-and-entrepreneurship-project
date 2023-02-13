@@ -44,7 +44,7 @@ body {
     font-size: 25px;
     overflow-x: hidden;
 }
-h1, h2 {
+h2 {
     text-align: center;
     z-index: 2;
     background: var(--back);
@@ -92,6 +92,9 @@ div {
 }
 hr.complete {
     width: 100%;
+}
+#title > h2 {
+    background: none;
 }
 /**E-mail form**/
 #email-form {
@@ -381,6 +384,9 @@ hr.complete {
 #me a:active {
     border: 2px solid var(--back);
 }
+#me h2 {
+    background: none;
+}
 /**Footer**/
 footer {
     display: flex;
@@ -469,5 +475,10 @@ footer a:hover {
 @media screen and (max-width: 445px) {  
     footer p {
         width: 95%;
+    }
+}
+@media screen and (min-width:1920px) {
+    #me {
+        background-size: cover;
     }
 }

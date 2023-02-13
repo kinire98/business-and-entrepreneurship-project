@@ -105,6 +105,7 @@ a:hover > i, a:hover > img {
     background-size: cover;
     background-attachment: fixed;
     margin-block-end: 0;
+    z-index: 1;
 }
 #title > h1 {
     background: var(--back);
@@ -113,7 +114,7 @@ a:hover > i, a:hover > img {
     z-index: 1;
 }
 #back {
-    position: absolute;
+    position: fixed;
     background: var(--letter-dif);
     border-radius: 8em;
     width: 50em;
@@ -124,7 +125,7 @@ a:hover > i, a:hover > img {
     z-index: 0;
 }
 #points {
-    position: absolute;
+    position: fixed;
     background-image: radial-gradient(var(--back) 3px, transparent 0);
     background-size: 40px 40px;
     height: 35em;
@@ -188,11 +189,15 @@ a:hover > i, a:hover > img {
 /*Skills div*/
 #skills {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
     min-height: 65vh;
+    background: var(--back);
+    margin-block: 0;
+    padding-block: 10vh;
 }
 
 
@@ -541,6 +546,8 @@ a:hover > i, a:hover > img {
     z-index: 1;
     width: 100%;
     margin-block: 0;
+    background: var(--back);
+    padding-block: 10vh;
 }
 .margin {
     margin-left: 50px;
@@ -583,6 +590,7 @@ a:hover > i, a:hover > img {
 }
 /**Contact**/
 #contact {
+    position: relative;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -594,6 +602,8 @@ a:hover > i, a:hover > img {
     background-image: radial-gradient(var(--back) 3px, transparent 0);
     background-size: 40px 40px;
     background-attachment: fixed;
+    z-index: 3;
+    margin-block: 0;
 }
 #contact > a {
     padding-block: .5rem;
@@ -631,6 +641,8 @@ footer {
     justify-content: center;
     padding-block: 10vh;
     width: 100%;
+    z-index: 5;
+    position: relative;
 }
 footer > a > img {
     width: 100px;
