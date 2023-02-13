@@ -109,6 +109,9 @@ header > nav > div > a {
     width: 59.6px;
     height: 59.6px;
 }
+header > nav > div > a:hover > img {
+    transform: scale(1.08, 1.08);
+}
 header > nav > div > a > img {
     width: 59.6px;
     height: 59.6px;
