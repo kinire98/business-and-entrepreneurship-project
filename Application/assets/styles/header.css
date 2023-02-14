@@ -116,6 +116,7 @@ header > nav > div > a > img {
     width: 59.6px;
     height: 59.6px;
 }
+
 @media screen and (max-width:1300px) {
     header > nav > ul > li > a {
         justify-content: space-between;
@@ -185,4 +186,38 @@ header > nav > div > a > img {
         justify-content: space-between;
         margin-inline: 5vw;
     }
+    header.is-active > nav > ul > li > a > span {
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s;
+}
+}
+/**Nothing to do with header but I dont want to put all the css in every file**/
+#title > i {
+    position: absolute;
+    top: 95vh;
+    color: var(--back);
+    font-size: 3.5rem;
+    animation: title-arrows infinite ease-out 1.5s;
+}
+#title > i.left {
+    left: 60vh;
+}
+#title > i.right {
+    right: 60vh;
+}
+#title > span {
+
+}
+@keyframes title-arrows {
+   0% {
+    top: 93vh;
+   } 
+   50% {
+    top: 91vh;
+   }
+   100% {
+    top: 93vh;
+   }
 }

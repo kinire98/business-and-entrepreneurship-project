@@ -1,13 +1,12 @@
 export default function languageRedirection() {
     const ls = localStorage;
-    ls.setItem("language", "es")
     if (!ls.getItem("language") || ls.getItem("language") == "es") {
         ls.setItem("language", "es");
-        generateButton("es")
-        // open("./es", "_parent")
+        generateButton("es");
     }
     if(ls.getItem("language") == "en") {
-        open("./en", "_parent");
+        ls.setItem("language", "en");
+        generateButton("en");
     }
 }
 function generateButton(lan) {

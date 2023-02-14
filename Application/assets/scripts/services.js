@@ -8,7 +8,7 @@ let regexp = /android|iphone|kindle|ipad|webOS|iPhone|iPod|BlackBerry|WindowsPho
 
 document.addEventListener("DOMContentLoaded", () => {
     getYear();
-    addRemoveClassOnHover(".you", 'img[alt="A relaxed man"]', "hover", "hover");
+    addRemoveClassOnHover(".you", "#relax img", "hover", "hover");
     if (!isMobileDevice) {reveals();} else {revealEverything();}
     appear();
     hamburger();

@@ -73,6 +73,52 @@ img#logo {
     width: 600px;
     transform: rotate(-5deg);
 }
+.language-change {
+    position: fixed;
+    left: 2pc;
+    bottom: .5pc;
+    font-size: 4rem !important;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 99999999999;
+    opacity: 0;
+    visibility: hidden;
+    animation: show 1.5s 4s ease-in forwards;
+}
+.language-change i {
+    position: relative;
+    bottom: 30px;
+    left: 5px;
+    color: var(--letter);
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 1.75rem;
+    transform: rotate(45deg);
+}
+.language-change:hover i {
+    transform: rotate(45deg);
+}
+.language-change .little {
+    font-size: 1.5rem !important;
+    position: relative;
+    bottom: 50px;
+    left: 5px;
+}
+.language-change .big {
+    position: relative;
+    top: 15px;
+    font-size: 4rem !important;
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
 /**Animations**/
 
 #hi, #hand, #Im, #name, #secondName, #exclamation, #web, #dev, #logo, #arrows {
@@ -252,7 +298,7 @@ span#arrows i {color: var(--back);}
 @media screen and (max-width: 660px) {
     img#logo {
         width: 300px;
-        bottom: 200px;
+        bottom: 250px;
     } 
     span {
         font-size: 50% !important;
@@ -266,6 +312,12 @@ span#arrows i {color: var(--back);}
     #third {
         position: relative;
         top: -75px;
+    }
+    .language-change {
+        top: 1pc;
+        right: 2pc;
+        bottom: auto;
+        left: auto;
     }
 }
 @media screen and (max-width:501px) {
