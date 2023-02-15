@@ -152,7 +152,7 @@ a:hover > i, a:hover > img {
     background-image: url('../img/me-at-the-beach-2.jpg');
     background-size: cover;
     background-attachment: fixed;
-    background-position: 0 -250px;
+    /* background-position: 0 -250px; */
 }
 #who-am-I * {
     color: var(--back);
@@ -175,7 +175,7 @@ a:hover > i, a:hover > img {
     width: auto;
     display: inline;
     border-radius: 6rem;
-    background: var(--letter-dif);
+    background: var(--letter);
     padding: 2rem;
 }
 .internals > ul > li {

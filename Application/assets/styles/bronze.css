@@ -184,7 +184,7 @@ a:hover > i, a:hover > img {
     background-image: url('../img/relaxed-man-other.jpg');
     background-size: 100%;
     background-size: cover;
-    background-position: -100px;
+    background-position: -350px 0px;
 }
 #extra-features > #right {
     background-image: url('../img/e-mail.jpg');
